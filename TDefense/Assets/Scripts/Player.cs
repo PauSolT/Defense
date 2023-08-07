@@ -5,11 +5,22 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     HealthComponent playerHealth;
+    Camera mainCamera;
+
+    public GameObject bullet;
+    public Transform bulletSpawnPoint;
 
     public void InitPlayer()
     {
         playerHealth = GetComponent<HealthComponent>();
         playerHealth.InitHealthComponent();
+    }
+
+    Vector3 GetMousePosition()
+    {
+        Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPosition.z = 0f;
+        return mouseWorldPosition;
     }
     // Start is called before the first frame update
     void Start()
@@ -21,6 +32,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Instantiate(bullet, bulletSpawnPoint.position, bullet.transform.rotation);
+        }
     }
 }

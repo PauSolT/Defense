@@ -16,6 +16,7 @@ public class HealthComponent : MonoBehaviour
     {
         bool isDead = false;
         CurrentHealthPoints -= damagePoints;
+        LogHealth();
 
         if (CurrentHealthPoints <= 0)
         {
