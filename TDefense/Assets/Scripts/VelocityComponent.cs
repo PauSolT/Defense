@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class VelocityComponent : MonoBehaviour
 {
-    public float Velocity { get; set; } = 5.5f;
+    public float Velocity { get; set; } = 10f;
     void Update()
     {
-        transform.position += Time.deltaTime * Velocity * Vector3.right;
+        transform.position += Time.deltaTime * Velocity * gameObject.transform.up;
     }
 }
