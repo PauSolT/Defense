@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class DamageComponent : MonoBehaviour
 {
-    public int DamagePoints { get; set; } = 1;
+    [SerializeField]
+    int damagePoints = 1;
+
+    public int DamagePoints { get => damagePoints; }
 }

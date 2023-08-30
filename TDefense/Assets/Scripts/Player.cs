@@ -5,16 +5,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     HealthComponent playerHealth;
-    [SerializeField]
-    Camera mainCamera;
-
-    public GameObject bullet;
-    public GameObject turret;
-    public Transform bulletSpawnPoint;
-
-    public float fireRate;
-
-    bool canFire = true;
 
     public void InitPlayer()
     {
@@ -22,17 +12,7 @@ public class Player : MonoBehaviour
         playerHealth.InitHealthComponent();
     }
 
-    Vector3 GetMousePosition()
-    {
-        Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorldPosition.z = 0f;
-        return mouseWorldPosition;
-    }
 
-    Vector3 LookAtMousePosition()
-    {
-        return Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -43,27 +23,19 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        turret.transform.rotation = Quaternion.LookRotation(Vector3.forward, LookAtMousePosition() - transform.position);
-        if (Input.GetKey(KeyCode.Mouse0) && canFire)
+        
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.gameObject.tag);
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            StartCoroutine(Fire());
+            GameObject enemy = collision.gameObject;
+            enemy.TryGetComponent(out DamageComponent damageComponent);
+            playerHealth.TakeDamage(damageComponent.DamagePoints);
+            Destroy(enemy);
         }
-
-    }
-    
-
-    IEnumerator Fire()
-    {
-        canFire = false;
-        Instantiate(bullet, bulletSpawnPoint.position, turret.transform.rotation);
-        StartCoroutine(FireRateHandler());
-        yield return null;
-    }
-
-    IEnumerator FireRateHandler()
-    {
-        float timeToNextFire = 1 / fireRate;
-        yield return new WaitForSeconds(timeToNextFire);
-        canFire = true;
     }
 }
