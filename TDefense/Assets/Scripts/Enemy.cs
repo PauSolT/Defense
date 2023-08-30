@@ -16,7 +16,6 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         InitEnemy();
-        enemyHealth.LogHealth();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,6 +28,7 @@ public class Enemy : MonoBehaviour
             if (enemyHealth.TakeDamage(damageComponent.DamagePoints))
             {
                 Destroy(gameObject);
+                WaveManager.DecreaseEnemiesRemaining();
             }
         }
     }

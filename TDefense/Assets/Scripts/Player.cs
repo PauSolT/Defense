@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         InitPlayer();
-        playerHealth.LogHealth();
     }
 
     // Update is called once per frame
@@ -29,7 +28,6 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.CompareTag("Enemy"))
         {
             GameObject enemy = collision.gameObject;
