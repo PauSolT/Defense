@@ -12,6 +12,10 @@ public class Player : MonoBehaviour
     public GameObject turret;
     public Transform bulletSpawnPoint;
 
+    public float fireRate;
+
+    bool canFire = true;
+
     public void InitPlayer()
     {
         playerHealth = GetComponent<HealthComponent>();
@@ -39,11 +43,27 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        turret.transform.rotation = Quaternion.LookRotation(Vector3.forward, LookAtMousePosition() - transform.position); ;
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        turret.transform.rotation = Quaternion.LookRotation(Vector3.forward, LookAtMousePosition() - transform.position);
+        if (Input.GetKey(KeyCode.Mouse0) && canFire)
         {
-            Instantiate(bullet, bulletSpawnPoint.position, turret.transform.rotation);
+            StartCoroutine(Fire());
         }
 
+    }
+    
+
+    IEnumerator Fire()
+    {
+        canFire = false;
+        Instantiate(bullet, bulletSpawnPoint.position, turret.transform.rotation);
+        StartCoroutine(FireRateHandler());
+        yield return null;
+    }
+
+    IEnumerator FireRateHandler()
+    {
+        float timeToNextFire = 1 / fireRate;
+        yield return new WaitForSeconds(timeToNextFire);
+        canFire = true;
     }
 }
