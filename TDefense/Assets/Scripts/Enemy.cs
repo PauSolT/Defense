@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     HealthComponent enemyHealth;
+    WaveManager waveManager;
 
     public void InitEnemy()
     {
@@ -27,10 +28,16 @@ public class Enemy : MonoBehaviour
             Destroy(bullet);
             if (enemyHealth.TakeDamage(damageComponent.DamagePoints))
             {
-                Destroy(gameObject);
-                WaveManager.DecreaseEnemiesRemaining();
+                Die();
             }
         }
+    }
+
+    void Die()
+    {
+        waveManager = FindObjectOfType<WaveManager>();
+        waveManager.DecreaseEnemiesRemaining();
+        Destroy(gameObject);
     }
 
     // Update is called once per frame

@@ -8,7 +8,7 @@ public class WaveManager : MonoBehaviour
     public List<Transform> spawners;
     public GameObject enemy;
 
-    public int Wave { get; set; } = 1;
+    public int Wave { get; set; }
 
     int waveEnemies;
     int enemiesToSpawn;
@@ -22,18 +22,21 @@ public class WaveManager : MonoBehaviour
     }
 
 
-    void StartWave()
+    public void StartWave()
     {
+        PlayerPrefs.DeleteKey("wave");
+        Wave = PlayerPrefs.GetInt("wave", 1);
         waveEnemies = 3 + Wave * 2;
         enemiesToSpawn = waveEnemies;
         enemiesRemaining = waveEnemies;
         StartCoroutine(WaitForWaveToStart());
-        StartCoroutine(SpawnEnemy());
     }
 
     IEnumerator WaitForWaveToStart()
     {
         yield return new WaitForSeconds(3f);
+        StartCoroutine(SpawnEnemy());
+
     }
 
     IEnumerator SpawnEnemy()
@@ -48,10 +51,19 @@ public class WaveManager : MonoBehaviour
         yield return null;
     }
 
-    static public void DecreaseEnemiesRemaining()
+    public void DecreaseEnemiesRemaining()
     {
         enemiesRemaining--;
         if (enemiesRemaining == 0)
-            Debug.Log("Wave destroyed");
+        {
+            EndWave();
+        }
+    }
+
+    void EndWave()
+    {
+        Wave++;
+        PlayerPrefs.SetInt("wave",Wave);
+
     }
 }

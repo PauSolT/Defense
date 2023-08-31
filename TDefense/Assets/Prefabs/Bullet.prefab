@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6152771853214367518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f5cabde79ef62244bcaad55d93dfd3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 10
+  velocity: 25
   velocityDirection: 0
 --- !u!58 &8642897852368448235
 CircleCollider2D:
@@ -143,4 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb4879ea37faf6d4bbbdc939b39d6eb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerToDestroy: 1.65
+  timerToDestroy: 0.72
