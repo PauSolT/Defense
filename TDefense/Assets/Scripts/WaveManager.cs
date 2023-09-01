@@ -6,7 +6,13 @@ public class WaveManager : MonoBehaviour
 {
 
     public List<Transform> spawners;
-    public GameObject enemy;
+    public GameObject normal;
+    public GameObject tank;
+    public GameObject fast;
+    public GameObject buffer;
+    public GameObject zigzag;
+    public GameObject spawner;
+    public GameObject boss;
 
     public int Wave { get; set; }
 
@@ -26,7 +32,6 @@ public class WaveManager : MonoBehaviour
     {
         PlayerPrefs.DeleteKey("wave");
         Wave = PlayerPrefs.GetInt("wave", 1);
-        waveEnemies = -1 + Wave * 2;
         enemiesToSpawn = waveEnemies;
         enemiesRemaining = waveEnemies;
         StartCoroutine(WaitForWaveToStart());
@@ -44,7 +49,7 @@ public class WaveManager : MonoBehaviour
         while (enemiesToSpawn > 0)
         {
             int randomSpawner = Random.Range(0, spawners.Count);
-            Instantiate(enemy, spawners[randomSpawner].position, enemy.transform.rotation);
+            Instantiate(normal, spawners[randomSpawner].position, normal.transform.rotation);
             enemiesToSpawn--;
             yield return new WaitForSeconds(1f);
         }

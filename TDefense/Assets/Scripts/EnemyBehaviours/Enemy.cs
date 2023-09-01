@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     HealthComponent enemyHealth;
     WaveManager waveManager;
+    [SerializeField]
+    EnemyInfo info;
 
     public void InitEnemy()
     {

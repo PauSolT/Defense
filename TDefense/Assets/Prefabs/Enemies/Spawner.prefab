@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoints: 20
+  currentHealthPoints: 0
 --- !u!114 &1082768398811879329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b017ed0abd5cc6347aebdc10405274ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  info: {fileID: 11400000, guid: 7c10d4a4dd3101745ab8f1ada3ae5256, type: 2}
 --- !u!114 &1082768398811879356
 MonoBehaviour:
   m_ObjectHideFlags: 0

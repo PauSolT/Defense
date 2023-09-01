@@ -1119,7 +1119,13 @@ MonoBehaviour:
   - {fileID: 1502986612}
   - {fileID: 73128640}
   - {fileID: 1057861335}
-  enemy: {fileID: 1082768398811879333, guid: 9aab9f30cc6f29f4fb1be3d409ddf8b7, type: 3}
+  normal: {fileID: 1082768398811879333, guid: 98d950611318b53469ee86a0dc171c73, type: 3}
+  tank: {fileID: 1082768398811879333, guid: 149b0106b8e9f134686ca0254163edfa, type: 3}
+  fast: {fileID: 1082768398811879333, guid: 963e281754bd88b46aacd717d738fc4a, type: 3}
+  buffer: {fileID: 1082768398811879333, guid: d1c27e8de48208b45a58c19e251e7a1c, type: 3}
+  zigzag: {fileID: 1082768398811879333, guid: 9aab9f30cc6f29f4fb1be3d409ddf8b7, type: 3}
+  spawner: {fileID: 1082768398811879333, guid: 7eb4e8de240a6b74b920ad8310d1d1cd, type: 3}
+  boss: {fileID: 1082768398811879333, guid: 2ed349c74aa47144e9bb9b15cc49aadb, type: 3}
 --- !u!4 &1161598196
 Transform:
   m_ObjectHideFlags: 0
