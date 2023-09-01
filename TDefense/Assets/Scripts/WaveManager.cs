@@ -26,7 +26,7 @@ public class WaveManager : MonoBehaviour
     {
         PlayerPrefs.DeleteKey("wave");
         Wave = PlayerPrefs.GetInt("wave", 1);
-        waveEnemies = 3 + Wave * 2;
+        waveEnemies = -1 + Wave * 2;
         enemiesToSpawn = waveEnemies;
         enemiesRemaining = waveEnemies;
         StartCoroutine(WaitForWaveToStart());

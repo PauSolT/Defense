@@ -7,5 +7,5 @@ public class DamageComponent : MonoBehaviour
     [SerializeField]
     int damagePoints = 1;
 
-    public int DamagePoints { get => damagePoints; }
+    public int DamagePoints { get => damagePoints; set => damagePoints = value; }
 }

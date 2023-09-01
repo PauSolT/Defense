@@ -10,7 +10,6 @@ public class Enemy : MonoBehaviour
     public void InitEnemy()
     {
         enemyHealth = GetComponent<HealthComponent>();
-        enemyHealth.MaxHealthPoints = 3;
         enemyHealth.InitHealthComponent();
     }
     // Start is called before the first frame update
@@ -19,7 +18,7 @@ public class Enemy : MonoBehaviour
         InitEnemy();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("PlayerBullet"))
         {
@@ -38,11 +37,5 @@ public class Enemy : MonoBehaviour
         waveManager = FindObjectOfType<WaveManager>();
         waveManager.DecreaseEnemiesRemaining();
         Destroy(gameObject);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
