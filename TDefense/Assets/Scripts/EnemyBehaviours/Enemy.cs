@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     WaveManager waveManager;
     [SerializeField]
     EnemyInfo info;
+    public EnemyInfo EnemyInfo { get => info; }
 
     public void InitEnemy()
     {
