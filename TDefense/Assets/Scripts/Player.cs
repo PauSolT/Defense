@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public UIGame uiGame;
     HealthComponent playerHealth;
 
     public void InitPlayer()
@@ -16,15 +17,9 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InitPlayer();
+        InitPlayer();   
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -32,8 +27,16 @@ public class Player : MonoBehaviour
         {
             GameObject enemy = collision.gameObject;
             enemy.TryGetComponent(out DamageComponent damageComponent);
-            playerHealth.TakeDamage(damageComponent.DamagePoints);
             Destroy(enemy);
+            if (playerHealth.TakeDamage(damageComponent.DamagePoints))
+            {
+                Die();
+            }
         }
+    }
+
+    void Die()
+    {
+        uiGame.WaveLost();
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
+    public UIGame uiGame;
 
     public List<Transform> spawners;
     public List<GameObject> enemiesWave;
@@ -29,7 +30,8 @@ public class WaveManager : MonoBehaviour
     public void StartWave()
     {
         //PlayerPrefs.DeleteKey("wave");
-        //Wave = PlayerPrefs.GetInt("wave", 1);
+        Wave = PlayerPrefs.GetInt("wave", 1);
+        uiGame.waveText.text = "WAVE " + Wave;
         AddEnemiesToWave();
         enemiesRemaining = enemiesWave.Count;
         StartCoroutine(WaitForWaveToStart());
@@ -46,7 +48,8 @@ public class WaveManager : MonoBehaviour
         while (enemiesWave.Count > 0)
         {
             int randomSpawner = Random.Range(0, spawners.Count);
-            Instantiate(enemiesWave[0], spawners[randomSpawner].position, enemiesWave[0].transform.rotation);
+            GameObject enemy = Instantiate(enemiesWave[0], spawners[randomSpawner].position, enemiesWave[0].transform.rotation);
+            enemy.GetComponent<Enemy>().waveManager = this;
             enemiesWave.RemoveAt(0);
             yield return new WaitForSeconds(1f);
         }
@@ -68,6 +71,7 @@ public class WaveManager : MonoBehaviour
         enemiesWave.TrimExcess();
         Wave++;
         PlayerPrefs.SetInt("wave",Wave);
+        uiGame.WaveWon();
 
     }
 
@@ -94,6 +98,10 @@ public class WaveManager : MonoBehaviour
             if (wave % 20 == 0)
             {
                 numberOfEnemy = Mathf.FloorToInt(numberOfEnemy / 2);
+            }
+            if (i == 0)
+            {
+                numberOfEnemy += 3;
             }
 
             for (int j = 0; j < numberOfEnemy; j++)

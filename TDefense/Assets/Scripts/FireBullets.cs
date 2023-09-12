@@ -10,10 +10,13 @@ public class FireBullets : MonoBehaviour
     public float fireRate;
 
     bool canFire = true;
-    void Start()
-    {
-        
-    }
+
+    int baseBulletDamage = 5;
+    private int currentBulletDamage = 0;
+    public int BaseBulletDamage { get => baseBulletDamage; }
+    public int CurrentBulletDamage { get => currentBulletDamage; set => currentBulletDamage = value; }
+
+
 
     // Update is called once per frame
     void Update()
@@ -33,8 +36,10 @@ public class FireBullets : MonoBehaviour
     // Start is called before the first frame update
     IEnumerator Fire()
     {
+        Debug.Log(currentBulletDamage);
         canFire = false;
-        Instantiate(bullet, bulletSpawnPoint.position, transform.rotation);
+        GameObject bulletInstance = Instantiate(bullet, bulletSpawnPoint.position, transform.rotation);
+        bulletInstance.GetComponent<DamageComponent>().DamagePoints = currentBulletDamage;
         StartCoroutine(FireRateHandler());
         yield return null;
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     HealthComponent enemyHealth;
-    WaveManager waveManager;
+    public WaveManager waveManager;
     [SerializeField]
     EnemyInfo info;
     public EnemyInfo EnemyInfo { get => info; }
@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     public void InitEnemy()
     {
         enemyHealth = GetComponent<HealthComponent>();
+        enemyHealth.MaxHealthPoints = info.healthBase + info.healthGrow * waveManager.Wave;
         enemyHealth.InitHealthComponent();
     }
     // Start is called before the first frame update
