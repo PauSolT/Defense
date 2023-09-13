@@ -9,10 +9,12 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     EnemyInfo info;
     public EnemyInfo EnemyInfo { get => info; }
+    FireBullets fireBullets;
 
     public void InitEnemy()
     {
         enemyHealth = GetComponent<HealthComponent>();
+        fireBullets = FindObjectOfType<FireBullets>();
         enemyHealth.MaxHealthPoints = info.healthBase + info.healthGrow * waveManager.Wave;
         enemyHealth.InitHealthComponent();
     }
@@ -26,10 +28,18 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PlayerBullet"))
         {
-            GameObject bullet = collision.gameObject;
-            bullet.TryGetComponent(out DamageComponent damageComponent);
-            Destroy(bullet);
-            if (enemyHealth.TakeDamage(damageComponent.DamagePoints))
+            Destroy(collision.gameObject);
+            int bulletDamage = fireBullets.CurrentBulletDamage;
+            float isCrit = Random.Range(0f, 100f);
+
+            if (isCrit < fireBullets.CritRate)
+            {
+                Debug.Log(bulletDamage);
+                bulletDamage = Mathf.RoundToInt(bulletDamage * (1 + fireBullets.CritDamage / 100));
+                Debug.Log(bulletDamage);
+            }
+
+            if (enemyHealth.TakeDamage(bulletDamage))
             {
                 Die();
             }

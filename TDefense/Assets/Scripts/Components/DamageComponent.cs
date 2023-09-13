@@ -8,4 +8,5 @@ public class DamageComponent : MonoBehaviour
     int damagePoints = 1;
 
     public int DamagePoints { get => damagePoints; set => damagePoints = value; }
+
 }
