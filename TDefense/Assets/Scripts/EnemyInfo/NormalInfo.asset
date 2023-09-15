@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1199c8988fb9be49a22f423bfbc263b, type: 3}
   m_Name: NormalInfo
   m_EditorClassIdentifier: 
-  healthBase: 4
+  healthBase: 2
   healthGrow: 2
   waveGrow: 2
   wavesToGrow: 1

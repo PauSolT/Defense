@@ -7,10 +7,14 @@ public class Player : MonoBehaviour
     public UIGame uiGame;
     HealthComponent playerHealth;
 
+    static bool playerIsAlive = true;
+    public static bool PlayerIsAlive { get => playerIsAlive; }
+
     public void InitPlayer()
     {
         playerHealth = GetComponent<HealthComponent>();
         playerHealth.InitHealthComponent();
+        uiGame.RefreshLivesText(playerHealth.CurrentHealthPoints);
     }
 
 
@@ -32,11 +36,13 @@ public class Player : MonoBehaviour
             {
                 Die();
             }
+            uiGame.RefreshLivesText(playerHealth.CurrentHealthPoints);
         }
     }
 
     void Die()
     {
+        playerIsAlive = false;
         uiGame.WaveLost();
     }
 }

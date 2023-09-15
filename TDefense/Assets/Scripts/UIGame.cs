@@ -6,9 +6,11 @@ using TMPro;
 
 public class UIGame : MonoBehaviour
 {
+    public TextMeshProUGUI livesText;
     public TextMeshProUGUI waveText;
     public TextMeshProUGUI waveResult;
     public TextMeshProUGUI resultOption;
+    public TextMeshProUGUI moneyGeneratedThisRoundText;
     public GameObject waveFinishedMenu;
     public GameObject skillsMenu;
     public GameObject closeSkillMenu;
@@ -16,12 +18,19 @@ public class UIGame : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("MainMenu");
     }
 
     public void RestartScene()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("Gameplay");
+    }
+
+    public void RefreshLivesText(int lives)
+    {
+        livesText.text = "LIVES: " + lives.ToString();
     }
 
 
@@ -29,6 +38,7 @@ public class UIGame : MonoBehaviour
     {
         waveFinishedMenu.SetActive(true);
         Time.timeScale = 0.0f;
+        moneyGeneratedThisRoundText.text = "MONEY EARNED: " + PlayerUpgrades.moneyGeneratedThisRound.ToString();
     }
 
     public void WaveWon()
