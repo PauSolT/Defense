@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
         {
             GameObject enemy = collision.gameObject;
             enemy.TryGetComponent(out DamageComponent damageComponent);
-            Destroy(enemy);
+            enemy.GetComponent<Enemy>().PlayerDamaged();
             if (playerHealth.TakeDamage(damageComponent.DamagePoints))
             {
                 Die();

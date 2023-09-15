@@ -10,6 +10,8 @@ public class UIGame : MonoBehaviour
     public TextMeshProUGUI waveResult;
     public TextMeshProUGUI resultOption;
     public GameObject waveFinishedMenu;
+    public GameObject skillsMenu;
+    public GameObject closeSkillMenu;
 
 
     public void GoToMainMenu()
@@ -26,20 +28,35 @@ public class UIGame : MonoBehaviour
     public void FinishWave()
     {
         waveFinishedMenu.SetActive(true);
+        Time.timeScale = 0.0f;
     }
 
     public void WaveWon()
     {
-        waveFinishedMenu.SetActive(true);
+        FinishWave();
         waveResult.text = "WAVE WON";
         resultOption.text = "NEXT";
     }
 
     public void WaveLost()
     {
-        waveFinishedMenu.SetActive(true);
+        FinishWave();
         waveResult.text = "WAVE LOST";
         resultOption.text = "RESTART";
+    }
+
+    public void OpenSkillsMenu()
+    {
+        waveFinishedMenu.SetActive(false);
+        skillsMenu.SetActive(true);
+        closeSkillMenu.SetActive(true);
+    }
+
+    public void CloseSkillsMenu()
+    {
+        waveFinishedMenu.SetActive(true);
+        skillsMenu.SetActive(false);
+        closeSkillMenu.SetActive(false);
     }
 
 }

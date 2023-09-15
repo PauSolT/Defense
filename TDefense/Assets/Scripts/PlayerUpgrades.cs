@@ -14,6 +14,7 @@ public class PlayerUpgrades : MonoBehaviour
 
     [SerializeField]
     int money = 0;
+    public static int moneyGeneratedThisRound = 0;
     public int Money { get => money; set => money = value; }
 
 
@@ -67,19 +68,19 @@ public class PlayerUpgrades : MonoBehaviour
     void RefreshFireRateTexts()
     {
         buttonTexts[2].text = costFireRate.ToString();
-        valueTexts[2].text = "CURRENT FIRE RATE: " + (playerFire.fireRate).ToString();
+        valueTexts[2].text = "CURRENT FIRE RATE: " + (playerFire.fireRate).ToString() + "/s";
     }
 
     void RefreshCritRateTexts()
     {
         buttonTexts[3].text = costCritRate.ToString();
-        valueTexts[3].text = "CURRENT CRIT RATE: " + (upgradedCritRate * critRateMultiplier).ToString();
+        valueTexts[3].text = "CURRENT CRIT RATE: " + (upgradedCritRate * critRateMultiplier).ToString() + "%";
     }
 
     void RefreshCritDamageTexts()
     {
         buttonTexts[4].text = costCritDamage.ToString();
-        valueTexts[4].text = "CURRENT CRIT DAMAGE: " + (upgradedCritDamage * critDamageMultiplier).ToString();
+        valueTexts[4].text = "CURRENT CRIT DAMAGE: " + (upgradedCritDamage * critDamageMultiplier).ToString() + "%";
     }
 
     public void UpgradeDamage()
@@ -167,10 +168,14 @@ public class PlayerUpgrades : MonoBehaviour
         CalculateCostCritDamage();
     }
 
-
+    public void AddMoneyFromWave()
+    {
+        money += moneyGeneratedThisRound;
+    }
 
     void LoadUpgrades()
     {
+        money = PlayerPrefs.GetInt("money", 0);
         upgradedDamage = PlayerPrefs.GetInt("upgradedDamage", 0);
         upgradedHealth = PlayerPrefs.GetInt("upgradedHealth", 0);
         upgradedFireRate = PlayerPrefs.GetInt("upgradedFireRate", 0);
@@ -180,6 +185,7 @@ public class PlayerUpgrades : MonoBehaviour
 
     void SaveUpgrades()
     {
+        PlayerPrefs.SetInt("money", money);
         PlayerPrefs.SetInt("upgradedDamage", upgradedDamage);
         PlayerPrefs.SetInt("upgradedHealth", upgradedHealth);
         PlayerPrefs.SetInt("upgradedFireRate", upgradedFireRate);

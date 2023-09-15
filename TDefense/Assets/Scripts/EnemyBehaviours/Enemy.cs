@@ -48,6 +48,14 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        PlayerUpgrades.moneyGeneratedThisRound++;
+        waveManager = FindObjectOfType<WaveManager>();
+        waveManager.DecreaseEnemiesRemaining();
+        Destroy(gameObject);
+    }
+
+    public void PlayerDamaged()
+    {
         waveManager = FindObjectOfType<WaveManager>();
         waveManager.DecreaseEnemiesRemaining();
         Destroy(gameObject);

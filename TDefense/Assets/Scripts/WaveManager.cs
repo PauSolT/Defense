@@ -15,14 +15,15 @@ public class WaveManager : MonoBehaviour
     int wave = 1;
     public int Wave { get => wave; set => wave = value; }
 
+    [SerializeField]
     int enemiesRemaining;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1.0f;
         SetUpEnemyInfo();
-
         StartWave();
     }
 
