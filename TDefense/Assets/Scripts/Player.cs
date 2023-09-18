@@ -43,6 +43,6 @@ public class Player : MonoBehaviour
     void Die()
     {
         playerIsAlive = false;
-        uiGame.WaveLost();
+
     }
 }

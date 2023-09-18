@@ -5,9 +5,11 @@ using UnityEngine;
 public class HealthComponent : MonoBehaviour
 {
     [SerializeField]
+    readonly int baseMaxHealthPoints = 5;
     int maxHealthPoints = 5;
     [SerializeField]
     int currentHealthPoints;
+    public int BaseMaxHealthPoints { get => baseMaxHealthPoints; }
     public int MaxHealthPoints { get => maxHealthPoints; set => maxHealthPoints = value; }
     public int CurrentHealthPoints { get => currentHealthPoints; set => currentHealthPoints = value; }
 

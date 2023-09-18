@@ -38,6 +38,7 @@ public class UIGame : MonoBehaviour
 
     public void FinishWave()
     {
+        money.AddMoneyFromWave();
         waveFinishedMenu.SetActive(true);
         Time.timeScale = 0.0f;
         moneyGeneratedThisRoundText.text = "MONEY EARNED: " + PlayerUpgrades.MoneyGeneratedThisRound.ToString();
@@ -48,7 +49,6 @@ public class UIGame : MonoBehaviour
         FinishWave();
         waveResult.text = "WAVE WON";
         resultOption.text = "NEXT";
-        money.AddMoneyFromWave();
     }
 
     public void WaveLost()
@@ -56,7 +56,6 @@ public class UIGame : MonoBehaviour
         FinishWave();
         waveResult.text = "WAVE LOST";
         resultOption.text = "RESTART";
-        money.AddMoneyFromWave();
     }
 
     public void OpenSkillsMenu()

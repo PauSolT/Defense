@@ -50,10 +50,6 @@ public class Enemy : MonoBehaviour
         PlayerUpgrades.MoneyGeneratedThisRound += info.money;
         waveManager = FindObjectOfType<WaveManager>();
         waveManager.DecreaseEnemiesRemaining();
-        if (Player.PlayerIsAlive)
-        {
-            waveManager.CheckIfWaveEnded();
-        }
         Destroy(gameObject);
     }
 
@@ -61,10 +57,6 @@ public class Enemy : MonoBehaviour
     {
         waveManager = FindObjectOfType<WaveManager>();
         waveManager.DecreaseEnemiesRemaining();
-        if (Player.PlayerIsAlive)
-        {
-            waveManager.CheckIfWaveEnded();
-        }   
         Destroy(gameObject);
     }
 }

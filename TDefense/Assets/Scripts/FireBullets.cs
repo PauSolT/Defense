@@ -6,8 +6,11 @@ public class FireBullets : MonoBehaviour
 {
     public GameObject bullet;
     public Transform bulletSpawnPoint;
+    private readonly float baseFireRate = 1f;
+    public float BaseFireRate { get => baseFireRate; }
 
-    public float fireRate;
+    float fireRate = 0f;
+    public float FireRate { get => fireRate; set => fireRate = value; }
 
     bool canFire = true;
 
@@ -16,10 +19,14 @@ public class FireBullets : MonoBehaviour
     public int BaseBulletDamage { get => baseBulletDamage; }
     public int CurrentBulletDamage { get => currentBulletDamage; set => currentBulletDamage = value; }
 
-    float critRate = 0f;
+    readonly float baseCritRate = 0f;
+    float critRate;
+    readonly float baseCritDamage = 50f;
     float critDamage = 50f;
+    public float BaseCritRate { get => baseCritRate; }
     public float CritRate { get => critRate; set => critRate = value; }
     public float CritDamage { get => critDamage; set => critDamage = value; }
+    public float BaseCritDamage { get => baseCritDamage; }
 
 
 

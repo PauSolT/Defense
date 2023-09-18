@@ -21,9 +21,9 @@ public class PlayerUpgrades : MonoBehaviour
 
     int upgradedDamage = 0;
     int upgradedHealth = 0;
-    int upgradedFireRate = 0;
-    int upgradedCritRate = 0;
-    int upgradedCritDamage = 0;
+    float upgradedFireRate = 0;
+    float upgradedCritRate = 0;
+    float upgradedCritDamage = 0;
 
     int costDamage = 0;
     int costHealth = 0;
@@ -39,6 +39,7 @@ public class PlayerUpgrades : MonoBehaviour
 
     private void Start()
     {
+        LoadUpgrades();
         moneyGeneratedThisRound = 0;
         ApplyUpgrades();
         CalculateAllCosts();
@@ -57,7 +58,7 @@ public class PlayerUpgrades : MonoBehaviour
     void RefreshDamageTexts()
     {
         buttonTexts[0].text = costDamage.ToString();
-        valueTexts[0].text = "CURRENT DAMAGE: " + (upgradedDamage * damageMultiplier + playerFire.BaseBulletDamage).ToString();
+        valueTexts[0].text = "CURRENT DAMAGE: " + (playerFire.CurrentBulletDamage).ToString();
     }
 
     void RefreshHealthTexts()
@@ -69,19 +70,19 @@ public class PlayerUpgrades : MonoBehaviour
     void RefreshFireRateTexts()
     {
         buttonTexts[2].text = costFireRate.ToString();
-        valueTexts[2].text = "CURRENT FIRE RATE: " + (playerFire.fireRate).ToString() + "/s";
+        valueTexts[2].text = "CURRENT FIRE RATE: " + (playerFire.FireRate).ToString("#.0") + "/s";
     }
 
     void RefreshCritRateTexts()
     {
         buttonTexts[3].text = costCritRate.ToString();
-        valueTexts[3].text = "CURRENT CRIT RATE: " + (upgradedCritRate * critRateMultiplier).ToString() + "%";
+        valueTexts[3].text = "CURRENT CRIT RATE: " + (playerFire.CritRate).ToString("#.0") + "%";
     }
 
     void RefreshCritDamageTexts()
     {
         buttonTexts[4].text = costCritDamage.ToString();
-        valueTexts[4].text = "CURRENT CRIT DAMAGE: " + (upgradedCritDamage * critDamageMultiplier).ToString() + "%";
+        valueTexts[4].text = "CURRENT CRIT DAMAGE: " + (playerFire.CritDamage).ToString() + "%";
     }
 
     public void UpgradeDamage()
@@ -91,6 +92,7 @@ public class PlayerUpgrades : MonoBehaviour
             money -= costDamage;
             upgradedDamage++;
             CalculateCostDamage();
+            ApplyUpgrades();
             RefreshDamageTexts();
         }
     }
@@ -101,6 +103,7 @@ public class PlayerUpgrades : MonoBehaviour
             money -= costHealth;
             upgradedHealth++;
             CalculateCostHealth();
+            ApplyUpgrades();
             RefreshHealthTexts();
         }
     }
@@ -111,6 +114,7 @@ public class PlayerUpgrades : MonoBehaviour
             money -= costFireRate;
             upgradedFireRate++;
             CalculateCostFireRate();
+            ApplyUpgrades();
             RefreshFireRateTexts();
         }
     }
@@ -121,6 +125,7 @@ public class PlayerUpgrades : MonoBehaviour
             money -= costCritRate;
             upgradedCritRate++;
             CalculateCostCritRate();
+            ApplyUpgrades();
             RefreshCritRateTexts();
         }
     }
@@ -131,6 +136,7 @@ public class PlayerUpgrades : MonoBehaviour
             money -= costCritDamage;
             upgradedCritDamage++;
             CalculateCostCritDamage();
+            ApplyUpgrades();
             RefreshCritDamageTexts();
         }
     }
@@ -179,9 +185,9 @@ public class PlayerUpgrades : MonoBehaviour
         money = PlayerPrefs.GetInt("money", 0);
         upgradedDamage = PlayerPrefs.GetInt("upgradedDamage", 0);
         upgradedHealth = PlayerPrefs.GetInt("upgradedHealth", 0);
-        upgradedFireRate = PlayerPrefs.GetInt("upgradedFireRate", 0);
-        upgradedCritRate = PlayerPrefs.GetInt("upgradedCritRate", 0);
-        upgradedCritDamage = PlayerPrefs.GetInt("upgradedCritDamage", 0);
+        upgradedFireRate = PlayerPrefs.GetFloat("upgradedFireRate", 0);
+        upgradedCritRate = PlayerPrefs.GetFloat("upgradedCritRate", 0);
+        upgradedCritDamage = PlayerPrefs.GetFloat("upgradedCritDamage", 0);
     }
 
     void SaveUpgrades()
@@ -189,18 +195,40 @@ public class PlayerUpgrades : MonoBehaviour
         PlayerPrefs.SetInt("money", money);
         PlayerPrefs.SetInt("upgradedDamage", upgradedDamage);
         PlayerPrefs.SetInt("upgradedHealth", upgradedHealth);
-        PlayerPrefs.SetInt("upgradedFireRate", upgradedFireRate);
-        PlayerPrefs.SetInt("upgradedCritRate", upgradedCritRate);
-        PlayerPrefs.SetInt("upgradedCritDamage", upgradedCritDamage);
+        PlayerPrefs.SetFloat("upgradedFireRate", upgradedFireRate);
+        PlayerPrefs.SetFloat("upgradedCritRate", upgradedCritRate);
+        PlayerPrefs.SetFloat("upgradedCritDamage", upgradedCritDamage);
     }
 
     void ApplyUpgrades()
     {
         playerFire.CurrentBulletDamage = upgradedDamage * damageMultiplier + playerFire.BaseBulletDamage;
-        playerHealth.MaxHealthPoints = upgradedHealth * healthMultiplier + playerHealth.MaxHealthPoints;
-        playerFire.fireRate = upgradedFireRate * fireRateMultiplier + playerFire.fireRate;
-        playerFire.CritRate = upgradedCritRate * critRateMultiplier;
-        playerFire.CritDamage = upgradedCritDamage * critDamageMultiplier + playerFire.CritDamage;
+        playerHealth.MaxHealthPoints = upgradedHealth * healthMultiplier + playerHealth.BaseMaxHealthPoints;
+        playerFire.FireRate = upgradedFireRate * fireRateMultiplier + playerFire.BaseFireRate;
+        playerFire.CritRate = upgradedCritRate * critRateMultiplier + playerFire.BaseCritRate;
+        playerFire.CritDamage = upgradedCritDamage * critDamageMultiplier + playerFire.BaseCritDamage;
+        SaveUpgrades();
+    }
+
+    private void OnApplicationFocus(bool focus)
+    {
+        if (!focus)
+        {
+            SaveUpgrades();
+        }
+    }
+
+    private void OnApplicationPause(bool pause)
+    {
+        if (pause)
+        {
+            SaveUpgrades();
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        SaveUpgrades();
     }
 
 }
