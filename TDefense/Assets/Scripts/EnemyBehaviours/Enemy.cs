@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
         fireBullets = FindObjectOfType<FireBullets>();
         enemyHealth.MaxHealthPoints = info.healthBase + info.healthGrow * waveManager.Wave;
         enemyHealth.InitHealthComponent();
+        info.money = waveManager.Wave;
     }
     // Start is called before the first frame update
     void Start()
@@ -34,9 +35,7 @@ public class Enemy : MonoBehaviour
 
             if (isCrit < fireBullets.CritRate)
             {
-                Debug.Log(bulletDamage);
                 bulletDamage = Mathf.RoundToInt(bulletDamage * (1 + fireBullets.CritDamage / 100));
-                Debug.Log(bulletDamage);
             }
 
             if (enemyHealth.TakeDamage(bulletDamage))
@@ -48,9 +47,13 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        PlayerUpgrades.moneyGeneratedThisRound++;
+        PlayerUpgrades.MoneyGeneratedThisRound += info.money;
         waveManager = FindObjectOfType<WaveManager>();
         waveManager.DecreaseEnemiesRemaining();
+        if (Player.PlayerIsAlive)
+        {
+            waveManager.CheckIfWaveEnded();
+        }
         Destroy(gameObject);
     }
 
@@ -58,6 +61,10 @@ public class Enemy : MonoBehaviour
     {
         waveManager = FindObjectOfType<WaveManager>();
         waveManager.DecreaseEnemiesRemaining();
+        if (Player.PlayerIsAlive)
+        {
+            waveManager.CheckIfWaveEnded();
+        }   
         Destroy(gameObject);
     }
 }

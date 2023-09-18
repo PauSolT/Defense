@@ -6,6 +6,8 @@ using TMPro;
 
 public class UIGame : MonoBehaviour
 {
+    public PlayerUpgrades money;
+
     public TextMeshProUGUI livesText;
     public TextMeshProUGUI waveText;
     public TextMeshProUGUI waveResult;
@@ -38,7 +40,7 @@ public class UIGame : MonoBehaviour
     {
         waveFinishedMenu.SetActive(true);
         Time.timeScale = 0.0f;
-        moneyGeneratedThisRoundText.text = "MONEY EARNED: " + PlayerUpgrades.moneyGeneratedThisRound.ToString();
+        moneyGeneratedThisRoundText.text = "MONEY EARNED: " + PlayerUpgrades.MoneyGeneratedThisRound.ToString();
     }
 
     public void WaveWon()
@@ -46,6 +48,7 @@ public class UIGame : MonoBehaviour
         FinishWave();
         waveResult.text = "WAVE WON";
         resultOption.text = "NEXT";
+        money.AddMoneyFromWave();
     }
 
     public void WaveLost()
@@ -53,6 +56,7 @@ public class UIGame : MonoBehaviour
         FinishWave();
         waveResult.text = "WAVE LOST";
         resultOption.text = "RESTART";
+        money.AddMoneyFromWave();
     }
 
     public void OpenSkillsMenu()

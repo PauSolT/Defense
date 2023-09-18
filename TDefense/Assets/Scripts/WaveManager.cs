@@ -59,13 +59,13 @@ public class WaveManager : MonoBehaviour
     public void DecreaseEnemiesRemaining()
     {
         enemiesRemaining--;
+    }
+
+    public void CheckIfWaveEnded()
+    {
         if (enemiesRemaining == 0)
         {
-            bool playerIsAlive = Player.PlayerIsAlive;
-            if (playerIsAlive)
-            {
-                EndWave();
-            }
+            EndWave();
         }
     }
 
@@ -76,7 +76,6 @@ public class WaveManager : MonoBehaviour
         Wave++;
         PlayerPrefs.SetInt("wave",Wave);
         uiGame.WaveWon();
-
     }
 
     void SetUpEnemyInfo()

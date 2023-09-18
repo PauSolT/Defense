@@ -14,8 +14,9 @@ public class PlayerUpgrades : MonoBehaviour
 
     [SerializeField]
     int money = 0;
-    public static int moneyGeneratedThisRound = 0;
     public int Money { get => money; set => money = value; }
+    static int moneyGeneratedThisRound = 0;
+    public static int MoneyGeneratedThisRound { get => moneyGeneratedThisRound; set => moneyGeneratedThisRound = value; }
 
 
     int upgradedDamage = 0;
@@ -30,15 +31,15 @@ public class PlayerUpgrades : MonoBehaviour
     int costCritRate = 0;
     int costCritDamage = 0;
 
-
-    int damageMultiplier = 2;
-    int healthMultiplier = 5;
-    float fireRateMultiplier = 0.5f;
-    float critRateMultiplier = 0.5f;
-    float critDamageMultiplier = 1f;
+    readonly int damageMultiplier = 2;
+    readonly int healthMultiplier = 5;
+    readonly float fireRateMultiplier = 0.5f;
+    readonly float critRateMultiplier = 0.5f;
+    readonly float critDamageMultiplier = 1f;
 
     private void Start()
     {
+        moneyGeneratedThisRound = 0;
         ApplyUpgrades();
         CalculateAllCosts();
         RefreshAllTexts();
