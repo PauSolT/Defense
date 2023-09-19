@@ -59,20 +59,30 @@ public class WaveManager : MonoBehaviour
     public void DecreaseEnemiesRemaining()
     {
         enemiesRemaining--;
-        CheckIfWaveEnded();
-    }
-
-    public void CheckIfWaveEnded()
-    {
-        if(!Player.PlayerIsAlive)
-        {
-            uiGame.WaveLost();
-            return;
-        }
-
+        CheckIfPlayerIsDead();
         if (enemiesRemaining == 0)
         {
+            CheckIfWaveEnded();
+        }
+    }
+
+    void CheckIfWaveEnded()
+    {
+        if (!Player.PlayerIsAlive)
+        {
+            uiGame.WaveLost();
+           
+        } else
+        {
             EndWave();
+        }
+    }
+
+    public void CheckIfPlayerIsDead()
+    {
+        if (!Player.PlayerIsAlive)
+        {
+            uiGame.WaveLost();
         }
     }
 

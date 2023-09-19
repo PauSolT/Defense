@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
 
     public void InitPlayer()
     {
+        playerIsAlive = true;
         playerHealth = GetComponent<HealthComponent>();
         playerHealth.InitHealthComponent();
         uiGame.RefreshLivesText(playerHealth.CurrentHealthPoints);
@@ -32,17 +33,18 @@ public class Player : MonoBehaviour
             GameObject enemy = collision.gameObject;
             enemy.TryGetComponent(out DamageComponent damageComponent);
             enemy.GetComponent<Enemy>().PlayerDamaged();
-            if (playerHealth.TakeDamage(damageComponent.DamagePoints))
-            {
-                Die();
-            }
+            playerHealth.TakeDamage(damageComponent.DamagePoints);
+            CheckIfDead();
+
             uiGame.RefreshLivesText(playerHealth.CurrentHealthPoints);
         }
     }
 
-    void Die()
+    void CheckIfDead()
     {
-        playerIsAlive = false;
-
+        if (playerHealth.CurrentHealthPoints -1 <= 0)
+        {
+            playerIsAlive = false;
+        }
     }
 }
