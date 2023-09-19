@@ -33,8 +33,8 @@ public class PlayerUpgrades : MonoBehaviour
 
     readonly int damageMultiplier = 2;
     readonly int healthMultiplier = 5;
-    readonly float fireRateMultiplier = 0.5f;
-    readonly float critRateMultiplier = 0.5f;
+    readonly float fireRateMultiplier = 0.1f;
+    readonly float critRateMultiplier = 0.25f;
     readonly float critDamageMultiplier = 1f;
 
     private void Start()

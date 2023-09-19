@@ -8,6 +8,7 @@ public class UIGame : MonoBehaviour
 {
     public PlayerUpgrades money;
 
+    public TextMeshProUGUI moneyText;
     public TextMeshProUGUI livesText;
     public TextMeshProUGUI waveText;
     public TextMeshProUGUI waveResult;
@@ -60,6 +61,7 @@ public class UIGame : MonoBehaviour
 
     public void OpenSkillsMenu()
     {
+        moneyText.text = "MONEY: " + money.Money.ToString();
         waveFinishedMenu.SetActive(false);
         skillsMenu.SetActive(true);
         closeSkillMenu.SetActive(true);
