@@ -29,7 +29,6 @@ public class WaveManager : MonoBehaviour
 
     public void StartWave()
     {
-        //PlayerPrefs.DeleteKey("wave");
         Wave = PlayerPrefs.GetInt("wave", 1);
         uiGame.waveText.text = "WAVE " + Wave;
         AddEnemiesToWave();
