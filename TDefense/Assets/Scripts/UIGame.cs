@@ -66,10 +66,15 @@ public class UIGame : MonoBehaviour
 
     public void OpenSkillsMenu()
     {
-        moneyText.text = "MONEY: " + money.Money.ToString();
+        RefreshMoneyText();
         waveFinishedMenu.SetActive(false);
         skillsMenu.SetActive(true);
         closeSkillMenu.SetActive(true);
+    }
+
+    public void RefreshMoneyText()
+    {
+        moneyText.text = money.Money.ToString();
     }
 
     public void CloseSkillsMenu()

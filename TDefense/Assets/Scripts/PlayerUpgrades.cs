@@ -58,31 +58,31 @@ public class PlayerUpgrades : MonoBehaviour
     void RefreshDamageTexts()
     {
         buttonTexts[0].text = costDamage.ToString();
-        valueTexts[0].text = "CURRENT DAMAGE: " + (playerFire.CurrentBulletDamage).ToString();
+        valueTexts[0].text = "CURRENT: " + (playerFire.CurrentBulletDamage).ToString();
     }
 
     void RefreshHealthTexts()
     {
         buttonTexts[1].text = costHealth.ToString();
-        valueTexts[1].text = "CURRENT HEALTH: " + (playerHealth.MaxHealthPoints).ToString();
+        valueTexts[1].text = "CURRENT: " + (playerHealth.MaxHealthPoints).ToString();
     }
 
     void RefreshFireRateTexts()
     {
         buttonTexts[2].text = costFireRate.ToString();
-        valueTexts[2].text = "CURRENT FIRE RATE: " + (playerFire.FireRate).ToString("#.0") + "/s";
+        valueTexts[2].text = "CURRENT: " + (playerFire.FireRate).ToString("0.0") + "/s";
     }
 
     void RefreshCritRateTexts()
     {
         buttonTexts[3].text = costCritRate.ToString();
-        valueTexts[3].text = "CURRENT CRIT RATE: " + (playerFire.CritRate).ToString("#.0") + "%";
+        valueTexts[3].text = "CURRENT: " + (playerFire.CritRate).ToString("0.0") + "%";
     }
 
     void RefreshCritDamageTexts()
     {
         buttonTexts[4].text = costCritDamage.ToString();
-        valueTexts[4].text = "CURRENT CRIT DAMAGE: " + (playerFire.CritDamage).ToString() + "%";
+        valueTexts[4].text = "CURRENT: " + (playerFire.CritDamage).ToString() + "%";
     }
 
     public void UpgradeDamage()
