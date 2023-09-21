@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -12,8 +13,12 @@ public class UIGame : MonoBehaviour
     public TextMeshProUGUI livesText;
     public TextMeshProUGUI waveText;
     public TextMeshProUGUI waveResult;
-    public TextMeshProUGUI resultOption;
     public TextMeshProUGUI moneyGeneratedThisRoundText;
+
+    public Image resultOption;
+    public Sprite waveWonSprite;
+    public Sprite waveLostSprite;
+
     public GameObject waveFinishedMenu;
     public GameObject skillsMenu;
     public GameObject closeSkillMenu;
@@ -33,7 +38,7 @@ public class UIGame : MonoBehaviour
 
     public void RefreshLivesText(int lives)
     {
-        livesText.text = "LIVES: " + lives.ToString();
+        livesText.text = lives.ToString();
     }
 
 
@@ -42,21 +47,21 @@ public class UIGame : MonoBehaviour
         money.AddMoneyFromWave();
         waveFinishedMenu.SetActive(true);
         Time.timeScale = 0.0f;
-        moneyGeneratedThisRoundText.text = "MONEY EARNED: " + PlayerUpgrades.MoneyGeneratedThisRound.ToString();
+        moneyGeneratedThisRoundText.text = PlayerUpgrades.MoneyGeneratedThisRound.ToString();
     }
 
     public void WaveWon()
     {
         FinishWave();
         waveResult.text = "WAVE WON";
-        resultOption.text = "NEXT";
+        resultOption.sprite = waveWonSprite;
     }
 
     public void WaveLost()
     {
         FinishWave();
         waveResult.text = "WAVE LOST";
-        resultOption.text = "RESTART";
+        resultOption.sprite = waveLostSprite;
     }
 
     public void OpenSkillsMenu()
