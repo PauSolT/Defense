@@ -22,6 +22,7 @@ public class UIGame : MonoBehaviour
     public GameObject waveFinishedMenu;
     public GameObject skillsMenu;
     public GameObject closeSkillMenu;
+    public GameObject settingsMenu;
 
 
     public void GoToMainMenu()
@@ -82,6 +83,18 @@ public class UIGame : MonoBehaviour
         waveFinishedMenu.SetActive(true);
         skillsMenu.SetActive(false);
         closeSkillMenu.SetActive(false);
+    }
+
+    public void OpenSettingsMenu()
+    {
+        Time.timeScale = 0.0f;
+        settingsMenu.SetActive(true);
+    }
+
+    public void CloseSettingsMenu()
+    {
+        settingsMenu.SetActive(false);
+        Time.timeScale = 1.0f;
     }
 
 }
