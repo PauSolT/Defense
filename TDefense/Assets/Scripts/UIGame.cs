@@ -50,6 +50,8 @@ public class UIGame : MonoBehaviour
     public void FinishWave()
     {
         money.AddMoneyFromWave();
+        money.SaveMoney();
+        settingsMenu.SetActive(false);
         waveFinishedMenu.SetActive(true);
         Time.timeScale = 0.0f;
         moneyGeneratedThisRoundText.text = PlayerUpgrades.MoneyGeneratedThisRound.ToString();

@@ -190,6 +190,11 @@ public class PlayerUpgrades : MonoBehaviour
         upgradedCritDamage = PlayerPrefs.GetFloat("upgradedCritDamage", 0);
     }
 
+    public void SaveMoney()
+    {
+        PlayerPrefs.SetInt("money", money);
+    }
+
     void SaveUpgrades()
     {
         PlayerPrefs.SetInt("money", money);
