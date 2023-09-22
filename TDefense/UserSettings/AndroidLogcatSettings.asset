@@ -1,13 +1,26 @@
 {
-    "m_SelectedDeviceId": "",
+    "m_SelectedDeviceId": "U44TUOCQR4U8DIW8",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "U44TUOCQR4U8DIW8",
+        "name": "com.DefaultCompany.com.unity.template.mobile2D",
+        "processId": 678,
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [],
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "U44TUOCQR4U8DIW8",
+            "name": "com.oppo.launcher",
+            "processId": 2538,
+            "exited": false
+        },
+        {
+            "deviceId": "U44TUOCQR4U8DIW8",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 678,
+            "exited": false
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {
@@ -41,9 +54,20 @@
         ]
     },
     "m_MemoryViewerState": {
-        "MemoryWindowHeight": 0.0,
-        "MemoryWindowWidth": 0.0,
-        "MemoryTypeEnabled": [],
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
         "MemoryGroup": 2,
         "Behavior": 0
     },
