@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FireBullets : MonoBehaviour
 {
@@ -28,7 +29,13 @@ public class FireBullets : MonoBehaviour
     public float CritDamage { get => critDamage; set => critDamage = value; }
     public float BaseCritDamage { get => baseCritDamage; }
 
-
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("MainMenu"))
+        {
+            canFire = false;
+        }
+    }
 
     // Update is called once per frame
     void Update()

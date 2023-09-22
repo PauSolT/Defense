@@ -23,6 +23,7 @@ public class UIGame : MonoBehaviour
     public GameObject skillsMenu;
     public GameObject closeSkillMenu;
     public GameObject settingsMenu;
+    public GameObject pauseText;
 
 
     public void GoToMainMenu()
@@ -39,7 +40,10 @@ public class UIGame : MonoBehaviour
 
     public void RefreshLivesText(int lives)
     {
-        livesText.text = lives.ToString();
+        if (livesText != null && !livesText.Equals(null))
+        {
+            livesText.text = lives.ToString();
+        }
     }
 
 
@@ -89,12 +93,16 @@ public class UIGame : MonoBehaviour
     {
         Time.timeScale = 0.0f;
         settingsMenu.SetActive(true);
+        pauseText.SetActive(true);
     }
 
     public void CloseSettingsMenu()
     {
         settingsMenu.SetActive(false);
+        pauseText.SetActive(false);
         Time.timeScale = 1.0f;
     }
+
+
 
 }

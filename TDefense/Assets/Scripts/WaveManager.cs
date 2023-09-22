@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class WaveManager : MonoBehaviour
 {
@@ -22,8 +24,16 @@ public class WaveManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetUpEnemyInfo();
-        StartWave();
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Gameplay"))
+        {
+            SetUpEnemyInfo();
+            StartWave();
+        } else
+        {
+            Wave = PlayerPrefs.GetInt("wave", 1);
+            uiGame.waveText.text = "WAVE " 
+                + Wave;
+        }
     }
 
 
