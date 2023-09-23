@@ -8,6 +8,8 @@ public class WaveManager : MonoBehaviour
 {
     public UIGame uiGame;
 
+    public GameObject tutorial;
+
     public List<Transform> spawners;
     public List<GameObject> enemiesWave;
     public List<GameObject> enemies;
@@ -31,8 +33,7 @@ public class WaveManager : MonoBehaviour
         } else
         {
             Wave = PlayerPrefs.GetInt("wave", 1);
-            uiGame.waveText.text = "WAVE " 
-                + Wave;
+            uiGame.waveText.text = "WAVE " + Wave;
         }
     }
 
@@ -48,7 +49,9 @@ public class WaveManager : MonoBehaviour
 
     IEnumerator WaitForWaveToStart()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
+        tutorial.SetActive(false);
+        yield return new WaitForSeconds(1f);
         StartCoroutine(SpawnEnemy());
     }
 

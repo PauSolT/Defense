@@ -12,6 +12,10 @@ public class PlayerUpgrades : MonoBehaviour
     public List<TextMeshProUGUI> buttonTexts;
     public List<TextMeshProUGUI> valueTexts;
 
+    public GameObject adButton;
+    public GameObject adText;
+    public GameObject adResultText;
+
     [SerializeField]
     int money = 0;
     public int Money { get => money; set => money = value; }
@@ -37,8 +41,11 @@ public class PlayerUpgrades : MonoBehaviour
     readonly float critRateMultiplier = 0.25f;
     readonly float critDamageMultiplier = 1f;
 
+    public bool adWatched = false;
+
     private void Start()
     {
+        adWatched = false;
         LoadUpgrades();
         moneyGeneratedThisRound = 0;
         ApplyUpgrades();
@@ -234,6 +241,13 @@ public class PlayerUpgrades : MonoBehaviour
     private void OnApplicationQuit()
     {
         SaveUpgrades();
+    }
+
+    public void AdWatched()
+    {
+        adButton.SetActive(false);
+        adText.SetActive(false);
+        adResultText.SetActive(true);
     }
 
 }
