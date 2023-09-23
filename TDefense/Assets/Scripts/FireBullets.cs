@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class FireBullets : MonoBehaviour
 {
+    public SoundManager soundManager;
+
     public GameObject bullet;
     public Transform bulletSpawnPoint;
     private readonly float baseFireRate = 1f;
@@ -64,6 +66,7 @@ public class FireBullets : MonoBehaviour
     IEnumerator FireRateHandler()
     {
         float timeToNextFire = 1 / fireRate;
+        soundManager.audios[3].Play();
         yield return new WaitForSeconds(timeToNextFire);
         canFire = true;
     }

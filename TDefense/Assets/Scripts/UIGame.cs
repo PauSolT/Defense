@@ -8,6 +8,7 @@ using TMPro;
 public class UIGame : MonoBehaviour
 {
     public PlayerUpgrades money;
+    public SoundManager soundManager;
 
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI livesText;
@@ -62,6 +63,7 @@ public class UIGame : MonoBehaviour
         FinishWave();
         waveResult.text = "WAVE WON";
         resultOption.sprite = waveWonSprite;
+        soundManager.audios[1].Play();
     }
 
     public void WaveLost()
@@ -69,6 +71,7 @@ public class UIGame : MonoBehaviour
         FinishWave();
         waveResult.text = "WAVE LOST";
         resultOption.sprite = waveLostSprite;
+        soundManager.audios[2].Play();
     }
 
     public void OpenSkillsMenu()
