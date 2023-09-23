@@ -35,11 +35,11 @@ public class PlayerUpgrades : MonoBehaviour
     int costCritRate = 0;
     int costCritDamage = 0;
 
-    readonly int damageMultiplier = 2;
-    readonly int healthMultiplier = 5;
+    readonly int damageMultiplier = 1;
+    readonly int healthMultiplier = 1;
     readonly float fireRateMultiplier = 0.1f;
     readonly float critRateMultiplier = 0.25f;
-    readonly float critDamageMultiplier = 1f;
+    readonly float critDamageMultiplier = 0.5f;
 
     public bool adWatched = false;
 

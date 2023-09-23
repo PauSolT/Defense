@@ -405,6 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiGame: {fileID: 4797671847866345614}
+  tutorial: {fileID: 0}
   spawners: []
   enemiesWave: []
   enemies: []
@@ -640,7 +641,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300120, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 682a96cf35ac0e946b7fc06d7009e17e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -806,7 +807,11 @@ MonoBehaviour:
   - {fileID: 4797671848192233137}
   - {fileID: 4797671847730160755}
   - {fileID: 4797671846245917347}
+  adButton: {fileID: 0}
+  adText: {fileID: 0}
+  adResultText: {fileID: 0}
   money: 0
+  adWatched: 0
 --- !u!4 &961228534
 Transform:
   m_ObjectHideFlags: 0
@@ -8337,14 +8342,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8962264, g: 0.8766535, b: 0.2240566, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300078, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8c2ce2f10e11156439e67dc452208684, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8604,7 +8609,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300066, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 570a2fc50a1db1b4b841de3b4784e572, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12005,6 +12010,7 @@ MonoBehaviour:
   skillsMenu: {fileID: 4797671847161715406}
   closeSkillMenu: {fileID: 4797671848221634325}
   settingsMenu: {fileID: 0}
+  settingsImage: {fileID: 0}
   pauseText: {fileID: 0}
 --- !u!1 &4797671847866345621
 GameObject:
@@ -12350,7 +12356,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.15, y: 0.1}
   m_AnchorMax: {x: 0.85, y: 0.9}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.0000076293945}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4797671847981878907
@@ -12373,7 +12379,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300086, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e195a6a6b195bdf4ba3398132aa4c42b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

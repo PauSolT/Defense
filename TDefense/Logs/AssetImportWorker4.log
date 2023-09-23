@@ -1,0 +1,918 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.30f1 (b4360d7cdac4) revision 11810317'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'en' Physical Memory: 32683 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+D:/Projects/Defense/TDefense
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+59098
+Successfully changed project path to: D:/Projects/Defense/TDefense
+D:/Projects/Defense/TDefense
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [5884] Host "[IP] 192.168.1.38 [Port] 0 [Flags] 2 [Guid] 2043761472 [EditorId] 2043761472 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-VK2T73L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [5884] Host "[IP] 192.168.1.38 [Port] 0 [Flags] 2 [Guid] 2043761472 [EditorId] 2043761472 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-VK2T73L) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with {0} workers.
+Refreshing native plugins compatible for Editor in 131.01 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.30f1 (b4360d7cdac4)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.30f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Projects/Defense/TDefense/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3080 (ID=0x2206)
+    Vendor:   NVIDIA
+    VRAM:     10067 MB
+    Driver:   31.0.15.3713
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.30f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.30f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56808
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.30f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.009300 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 253 ms
+Refreshing native plugins compatible for Editor in 112.50 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.985 seconds
+Domain Reload Profiling:
+	ReloadAssembly (985ms)
+		BeginReloadAssembly (95ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (792ms)
+			LoadAssemblies (92ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (127ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (600ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (356ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (113ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (81ms)
+				ProcessInitializeOnLoadMethodAttributes (49ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005854 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 120.47 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Completed reload, in  1.604 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1605ms)
+		BeginReloadAssembly (130ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (1370ms)
+			LoadAssemblies (107ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (273ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (895ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (20ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (121ms)
+				BeforeProcessingInitializeOnLoad (113ms)
+				ProcessInitializeOnLoadAttributes (585ms)
+				ProcessInitializeOnLoadMethodAttributes (45ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.86 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4243 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 83 unused Assets / (47.5 KB). Loaded Objects now: 4666.
+Memory consumption went from 164.2 MB to 164.2 MB.
+Total: 2.908100 ms (FindLiveObjects: 0.295500 ms CreateObjectMapping: 0.292900 ms MarkObjects: 2.235700 ms  DeleteObjects: 0.083400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 42711.657023 seconds.
+  path: Assets/Prefabs/Enemies/Boss.prefab
+  artifactKey: Guid(2ed349c74aa47144e9bb9b15cc49aadb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Prefabs/Enemies/Boss.prefab using Guid(2ed349c74aa47144e9bb9b15cc49aadb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e2738b3fe0ed559a3fe56c24a470dca') in 0.228596 seconds 
+Number of asset objects unloaded after import = 66
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006201 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 1.28 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Completed reload, in  1.685 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1686ms)
+		BeginReloadAssembly (186ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (46ms)
+		EndReloadAssembly (1383ms)
+			LoadAssemblies (146ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (327ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (807ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (27ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (93ms)
+				ProcessInitializeOnLoadAttributes (616ms)
+				ProcessInitializeOnLoadMethodAttributes (57ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.18 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4218 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 72 unused Assets / (22.9 KB). Loaded Objects now: 4676.
+Memory consumption went from 161.8 MB to 161.8 MB.
+Total: 4.630300 ms (FindLiveObjects: 0.591500 ms CreateObjectMapping: 0.492600 ms MarkObjects: 3.502500 ms  DeleteObjects: 0.042500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:CustomObjectIndexerAttribute: bc11b3a6c3213fcdd17b65e7da85e133 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 11.548275 seconds.
+  path: Assets/Prefabs/Enemies/Spawner.prefab
+  artifactKey: Guid(7eb4e8de240a6b74b920ad8310d1d1cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Prefabs/Enemies/Spawner.prefab using Guid(7eb4e8de240a6b74b920ad8310d1d1cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0695404fdc9e3ca4b3a0488c49e9d2ce') in 0.086442 seconds 
+Number of asset objects unloaded after import = 52
+========================================================================
+Received Import Request.
+  Time since last request: 736.016748 seconds.
+  path: Assets/Simple Buttons
+  artifactKey: Guid(d7fe9335f8300034eb75c2801ee200f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons using Guid(d7fe9335f8300034eb75c2801ee200f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '836892ff3b26d041045785d95f7ce8af') in 0.008330 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.178490 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)
+  artifactKey: Guid(37c4c5ade6799bf46a9cdbfaf56d1818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple) using Guid(37c4c5ade6799bf46a9cdbfaf56d1818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9541911e6fb937a85e52455619f8ef3a') in 0.007278 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.022327 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_01.png
+  artifactKey: Guid(519e049cda1c435499eebd1d97d741c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_01.png using Guid(519e049cda1c435499eebd1d97d741c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43a3ac21439dbbfd2e383c065cfa3d3e') in 0.094897 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_06.png
+  artifactKey: Guid(7bc8c39dc5d0dad4fb8cb25c945e617d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_06.png using Guid(7bc8c39dc5d0dad4fb8cb25c945e617d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5565e4914ae17779d8601d15b0c76969') in 0.041393 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_14.png
+  artifactKey: Guid(aef08c4eb1e0fc34fa5914ce321ca876) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_14.png using Guid(aef08c4eb1e0fc34fa5914ce321ca876) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6ff82de2cf66489ab43f853273c067c') in 0.028088 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_04.png
+  artifactKey: Guid(8963a9425e952d240b5ff86c34cebc65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_04.png using Guid(8963a9425e952d240b5ff86c34cebc65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6bea1eefac51afa2f6774a972c790df') in 0.032434 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_17.png
+  artifactKey: Guid(0b6ee167d60e08d41808b5efd5517964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_17.png using Guid(0b6ee167d60e08d41808b5efd5517964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '038d304a43f7ccd860686d0120794673') in 0.031857 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_07.png
+  artifactKey: Guid(ffa70af4cf7cbed45abd22050f3d4a0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_07.png using Guid(ffa70af4cf7cbed45abd22050f3d4a0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf8a6267a66eb270c426d1bb9bb4005c') in 0.028104 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_13.png
+  artifactKey: Guid(d8db4a8b7af7f9c4aabebd731eab9ab4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_13.png using Guid(d8db4a8b7af7f9c4aabebd731eab9ab4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14dab4274eff39d3fa9eae8c51b68f3d') in 0.028926 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_03.png
+  artifactKey: Guid(962d7198201944448a51b2b57b954427) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_03.png using Guid(962d7198201944448a51b2b57b954427) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdc8b2e75d22724bd36b68bb9996b2d2') in 0.029649 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_15.png
+  artifactKey: Guid(76b6ff8439f0a8140aa4a30455833466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_15.png using Guid(76b6ff8439f0a8140aa4a30455833466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dae80b294c33bfd1465fb3ba27a90fac') in 0.032333 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_10.png
+  artifactKey: Guid(1bad93de348aadf47a364526288f50e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_10.png using Guid(1bad93de348aadf47a364526288f50e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf1e8e328f5372205c1dd3d21c56cf70') in 0.028308 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_22.png
+  artifactKey: Guid(e6dfeec9339e2a54795e2f555415460a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_22.png using Guid(e6dfeec9339e2a54795e2f555415460a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f330260e055afad5cb2d8991a84e88ae') in 0.032871 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_21.png
+  artifactKey: Guid(b6517273bf674c74f9b4026b4efae24d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_21.png using Guid(b6517273bf674c74f9b4026b4efae24d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc6cf924a93823b74827ab8f18609807') in 0.033090 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_12.png
+  artifactKey: Guid(fb7a7b182ba03914b8475aead9ce3270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Buttons Style 1 (Rounded Purple)/ButtonsStyle1_12.png using Guid(fb7a7b182ba03914b8475aead9ce3270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf3c061b89c90cd68965f836ca66dbf1') in 0.028214 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 5.317324 seconds.
+  path: Assets/Simple Buttons/Buttons Style 14 (Square Gray)
+  artifactKey: Guid(e4b1ca0520f79af468a1c9dc87f69fe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Buttons Style 14 (Square Gray) using Guid(e4b1ca0520f79af468a1c9dc87f69fe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b8fcc697f44dd91c0fe979043af739a') in 0.006519 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.224965 seconds.
+  path: Assets/Simple Buttons/Icons
+  artifactKey: Guid(3c99566ad6e53354bb7cb62ca4c17432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Icons using Guid(3c99566ad6e53354bb7cb62ca4c17432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67092a9d3a22ac8acf03bf37530f8351') in 0.006069 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.025786 seconds.
+  path: Assets/Simple Buttons/Icons/Icon_02.gif
+  artifactKey: Guid(56f2b8fcb5b037548a4e66082b86910a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Icons/Icon_02.gif using Guid(56f2b8fcb5b037548a4e66082b86910a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbd7527aff5fa036a38d7c5bb57fe9e2') in 0.027906 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Simple Buttons/Icons/Icon_25.gif
+  artifactKey: Guid(95189407016192645af33efd237caa39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Icons/Icon_25.gif using Guid(95189407016192645af33efd237caa39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '660241d0fa35f0bad1fa932e4ea5cc8f') in 0.029911 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Simple Buttons/Icons/Icon_18.gif
+  artifactKey: Guid(5029c7fed7284514d86694221f107be4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Icons/Icon_18.gif using Guid(5029c7fed7284514d86694221f107be4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f808089111ec70d5f3c1f175525a78c5') in 0.040991 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Simple Buttons/Icons/Icon_16.gif
+  artifactKey: Guid(4a5cf0eacdee74c4dad5e49c69997b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Icons/Icon_16.gif using Guid(4a5cf0eacdee74c4dad5e49c69997b9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74a140f5be1c4261f58ea52ff5dfe9f5') in 0.032637 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Simple Buttons/Icons/Icon_11.gif
+  artifactKey: Guid(8fb227987c3443a428c776e6762f9d0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Icons/Icon_11.gif using Guid(8fb227987c3443a428c776e6762f9d0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '095debd0d33d821a29ebb76bb21883bc') in 0.044970 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Simple Buttons/Icons/Icon_12.gif
+  artifactKey: Guid(6802180492c22bd4d8af713729ed6038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Icons/Icon_12.gif using Guid(6802180492c22bd4d8af713729ed6038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58aa46af16056e9226f26ca418ab743b') in 0.035261 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Simple Buttons/Icons/Icon_10.gif
+  artifactKey: Guid(2650ccf2b858c5946a24b341e88ee198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Icons/Icon_10.gif using Guid(2650ccf2b858c5946a24b341e88ee198) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2242c925303fba33cc19ae830901dcb') in 0.043296 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Simple Buttons/Icons/Icon_14.gif
+  artifactKey: Guid(14a8c8fc76b1c1d4b81b16808e44db74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Simple Buttons/Icons/Icon_14.gif using Guid(14a8c8fc76b1c1d4b81b16808e44db74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5b8c073dd3e66b396650f3c8507ab8d') in 0.029585 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 55.577514 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(9d1d8f6d285679d48825e828692cbf66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Scripts using Guid(9d1d8f6d285679d48825e828692cbf66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9547e298fc37ec66f9cd1f2901dc827') in 0.007481 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 286.783316 seconds.
+  path: Assets/JellyIcons
+  artifactKey: Guid(7de3e30edce9b2a4e9c8b2f5417e1d6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons using Guid(7de3e30edce9b2a4e9c8b2f5417e1d6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbc5b7cb4a42622917f74eae6424b031') in 0.006469 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.234591 seconds.
+  path: Assets/JellyIcons/512x512
+  artifactKey: Guid(0f8b0c28fe83c154087009de4bd6714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512 using Guid(0f8b0c28fe83c154087009de4bd6714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fc66090c7acc1e9d3f2965dc14b69a2') in 0.007862 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.156129 seconds.
+  path: Assets/JellyIcons/512x512/UI
+  artifactKey: Guid(71734a785dcd4bc499a77924e70b133f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/UI using Guid(71734a785dcd4bc499a77924e70b133f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2333392453dd458adc1ae8d62894f46d') in 0.006221 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.087368 seconds.
+  path: Assets/JellyIcons/512x512/UI/BlueBox.png
+  artifactKey: Guid(ffc01e6441a156942a50ec6354039460) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/UI/BlueBox.png using Guid(ffc01e6441a156942a50ec6354039460) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af7b11807c6a0067044c35ff0e93599a') in 0.043639 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/JellyIcons/512x512/UI/GreyBox.png
+  artifactKey: Guid(0bbda2c0d0e31b24fa4dff9b9f0c0f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/UI/GreyBox.png using Guid(0bbda2c0d0e31b24fa4dff9b9f0c0f62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58b3457f3c300c3397b9f0442ef79117') in 0.036913 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/JellyIcons/512x512/UI/YellowBox.png
+  artifactKey: Guid(d60da27b0a1142b48a33907f3e386015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/UI/YellowBox.png using Guid(d60da27b0a1142b48a33907f3e386015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f1d5cf01bbbc7b258b08dcf20e3c365') in 0.038860 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 1.387902 seconds.
+  path: Assets/JellyIcons/512x512/Icons
+  artifactKey: Guid(70ec6c32e2a805844b8ed6e1bd426311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons using Guid(70ec6c32e2a805844b8ed6e1bd426311) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc4a06c07205b4372d3dfb240e66bb7a') in 0.007072 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.860641 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons
+  artifactKey: Guid(7a92d4d19ccde7045948e925767ffe42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons using Guid(7a92d4d19ccde7045948e925767ffe42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49890407644285d42bf3a24dc9ca7a90') in 0.007359 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.045734 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/ArrowDown.png
+  artifactKey: Guid(d7e28e686fb7bfe47a9ae7c34a67ed29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/ArrowDown.png using Guid(d7e28e686fb7bfe47a9ae7c34a67ed29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a44f6037438af24bcccce357011a214') in 0.033891 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Camera.png
+  artifactKey: Guid(ef01ee9d716739c42a06dc3d6ff3273e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Camera.png using Guid(ef01ee9d716739c42a06dc3d6ff3273e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f23745aa445aaef428199d2636190c85') in 0.030396 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Rewind2.png
+  artifactKey: Guid(4e35829650556934d832ec3df2dde6b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Rewind2.png using Guid(4e35829650556934d832ec3df2dde6b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f12fc5c1bfc28d82852dc1efecec50cb') in 0.028889 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Ladder.png
+  artifactKey: Guid(8a60a0df5e8b4a4478729123a5573aea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Ladder.png using Guid(8a60a0df5e8b4a4478729123a5573aea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8420d4df2b20079c16056e7fa75a4b4f') in 0.030781 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Cloud.png
+  artifactKey: Guid(59ef448f6d723614b8ab2d1fcdb6add4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Cloud.png using Guid(59ef448f6d723614b8ab2d1fcdb6add4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b4899cc6913330b45b6c0531bf2523b') in 0.033242 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/MusicOff.png
+  artifactKey: Guid(6e87d0e11bfe0ff46aa58c5123d79961) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/MusicOff.png using Guid(6e87d0e11bfe0ff46aa58c5123d79961) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e3b3020668b8d7e43ba116f0a0bb5a5') in 0.036193 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Music.png
+  artifactKey: Guid(3bfd55e277dfaee46b6e720f6915b19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Music.png using Guid(3bfd55e277dfaee46b6e720f6915b19c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a576e758429302deadca8a5d5c516c07') in 0.030293 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/DoubleArrowTop.png
+  artifactKey: Guid(035c40a51056c01448fadc3d53e626a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/DoubleArrowTop.png using Guid(035c40a51056c01448fadc3d53e626a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1321a4620371cba6947c66911caa6190') in 0.028711 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Cup1.png
+  artifactKey: Guid(26166cd42eef26445ad0dbd461a4ba27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Cup1.png using Guid(26166cd42eef26445ad0dbd461a4ba27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3b736f7164fac17c1dc96122ea9c2b6') in 0.034487 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Unlock.png
+  artifactKey: Guid(508313f959d899a4e96bf5f7d311ee2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Unlock.png using Guid(508313f959d899a4e96bf5f7d311ee2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a92d698b907c3c9e1b2cb78f32b94390') in 0.027816 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Stat.png
+  artifactKey: Guid(4feb4e54473ec2942936a8dfc447315b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Stat.png using Guid(4feb4e54473ec2942936a8dfc447315b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5bd6b2295a25e5b34a7c31ba836a2a8') in 0.031202 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Joystick.png
+  artifactKey: Guid(3a5b014d355010a40bd01b2e75ffc6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Joystick.png using Guid(3a5b014d355010a40bd01b2e75ffc6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc3e9262d2cc3f55b25aac43787f4e75') in 0.031878 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/PlayRight.png
+  artifactKey: Guid(570a2fc50a1db1b4b841de3b4784e572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/PlayRight.png using Guid(570a2fc50a1db1b4b841de3b4784e572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13c807033bdb2d15c88b641656d47a4a') in 0.030523 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Menu2.png
+  artifactKey: Guid(d18cc5164dbcf3c49bcf573c1ceceff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Menu2.png using Guid(d18cc5164dbcf3c49bcf573c1ceceff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97e367dbc97dde31ebc6a07ffaabcb9a') in 0.032089 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Stop.png
+  artifactKey: Guid(de7ffc70098f49c428f674ea06927511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Stop.png using Guid(de7ffc70098f49c428f674ea06927511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7a838f4e5e155b0250af1addfb1ce88') in 0.031396 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Menu.png
+  artifactKey: Guid(d6383a97e9324e6419d35e5d74ee7bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Menu.png using Guid(d6383a97e9324e6419d35e5d74ee7bf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8cca8714f7a567683294f90a1c45d91') in 0.036309 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Cross.png
+  artifactKey: Guid(682a96cf35ac0e946b7fc06d7009e17e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Cross.png using Guid(682a96cf35ac0e946b7fc06d7009e17e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3cb81778ef2679fd0a177126323151f') in 0.032435 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Twitter.png
+  artifactKey: Guid(a2396c0a9ec13b04fb4c6597fb496395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Twitter.png using Guid(a2396c0a9ec13b04fb4c6597fb496395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b3e4f303aa2d7ad24ab7e447520b739') in 0.031964 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Sound.png
+  artifactKey: Guid(e195a6a6b195bdf4ba3398132aa4c42b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Sound.png using Guid(e195a6a6b195bdf4ba3398132aa4c42b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5f63c003131094e33e097871e1ff582') in 0.030244 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Vibration.png
+  artifactKey: Guid(471140cc9da19534fbad9f5a3e7743e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Vibration.png using Guid(471140cc9da19534fbad9f5a3e7743e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a9fa3261509fb4c662c9ad98c347b2f') in 0.035242 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Facebook.png
+  artifactKey: Guid(0d4db153a8f610c4aa08edb663eaba09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Facebook.png using Guid(0d4db153a8f610c4aa08edb663eaba09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23ed18eeb20666df40fc1ab492418f25') in 0.032911 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Gear.png
+  artifactKey: Guid(199f9be9545c9a543831765b51d438f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Gear.png using Guid(199f9be9545c9a543831765b51d438f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da264617b8a5281822141859fd4ce27e') in 0.041085 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Cup.png
+  artifactKey: Guid(f3613e7c20b1374478fd591faed27a6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Cup.png using Guid(f3613e7c20b1374478fd591faed27a6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a810c00d09f3388e93f267698553d7a4') in 0.032408 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BasicIcons/Cup2.png
+  artifactKey: Guid(66a2000f9307a8d4a82d292241722f5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BasicIcons/Cup2.png using Guid(66a2000f9307a8d4a82d292241722f5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '842321d867d6dfd87dbbfdb8bdb2e094') in 0.032821 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.515978 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles
+  artifactKey: Guid(c39131f16ddbd6d4a9bffbe7558f040d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles using Guid(c39131f16ddbd6d4a9bffbe7558f040d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '214f2dc4f46bff5a6bb7225d28c16cb9') in 0.006809 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.055538 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircle.png
+  artifactKey: Guid(7ca398b436b814043a2eb89d2e1762a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircle.png using Guid(7ca398b436b814043a2eb89d2e1762a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9dee23dd73973b0d907a5acadddf4bc') in 0.035919 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleUnlock.png
+  artifactKey: Guid(e9579c94c46be9a4fb907f8515c42e8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleUnlock.png using Guid(e9579c94c46be9a4fb907f8515c42e8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7f4ff9ad851c6f1deaf144dfd221947') in 0.031962 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleLock.png
+  artifactKey: Guid(e64c3475c384ae34c8fe5b93cdf831f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleLock.png using Guid(e64c3475c384ae34c8fe5b93cdf831f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afb7763600788105b0e70d3170e3ee84') in 0.033719 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleLadder.png
+  artifactKey: Guid(42860ab9bf54ec24d8868516f81976b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleLadder.png using Guid(42860ab9bf54ec24d8868516f81976b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc969c617a55973de02e01c2f08de529') in 0.033169 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleVideocamera.png
+  artifactKey: Guid(3f50c510482e8b74087131b46e0384bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleVideocamera.png using Guid(3f50c510482e8b74087131b46e0384bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f795853ee64e1937ad51eefbe2d518b1') in 0.031492 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleCup.png
+  artifactKey: Guid(abd564fdbc367294eafb16a021be9ee9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleCup.png using Guid(abd564fdbc367294eafb16a021be9ee9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8f44f5e322cb787a49ffb72a96743cc') in 0.030519 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleTwitter.png
+  artifactKey: Guid(f48c3bb50c879dc4289c5f6598d492d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleTwitter.png using Guid(f48c3bb50c879dc4289c5f6598d492d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '540078f8be37c6291196b6a456f79d5d') in 0.033416 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleCamera.png
+  artifactKey: Guid(1c93a7cf4b7aa0d4e8b8dee934989b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleCamera.png using Guid(1c93a7cf4b7aa0d4e8b8dee934989b6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78bb92bd4aa45dd44e55c091e214c43d') in 0.030984 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCirclePause.png
+  artifactKey: Guid(51be826acfa16fb4d9a839b290afc9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCirclePause.png using Guid(51be826acfa16fb4d9a839b290afc9f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c6c38a77cf6dbd08214decdc90c6468') in 0.032820 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleStop.png
+  artifactKey: Guid(53e338174c911724e8079f997cea5e61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleStop.png using Guid(53e338174c911724e8079f997cea5e61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9d4778cc2ac05c1db94e51ddbaae644') in 0.030654 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleSound.png
+  artifactKey: Guid(e62c82ef74ffe354c82a153a015978d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleSound.png using Guid(e62c82ef74ffe354c82a153a015978d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e95be60cfc91c1c74eca66344a2e5a06') in 0.033809 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.004994 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleCup1.png
+  artifactKey: Guid(f40dfe4fc5953cf4f99767f58245f736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleCup1.png using Guid(f40dfe4fc5953cf4f99767f58245f736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7405adee4bd0be4e9a4c72b09f9ef7f5') in 0.030310 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleJoystick.png
+  artifactKey: Guid(64e650d37c062fd49b3490a519a453f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleJoystick.png using Guid(64e650d37c062fd49b3490a519a453f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b47abea70ef134a266746ca62df30cfa') in 0.036104 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleRewind2.png
+  artifactKey: Guid(7dce89991cb17214c9a1aa2807e122df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleRewind2.png using Guid(7dce89991cb17214c9a1aa2807e122df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8721d2f758cd942318942257a382b7aa') in 0.035241 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleSoundOff.png
+  artifactKey: Guid(d59ccdc79947e8b4fa9418d2573ae1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleSoundOff.png using Guid(d59ccdc79947e8b4fa9418d2573ae1e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee53c8127f185a830995005604856069') in 0.037521 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleMenu.png
+  artifactKey: Guid(11092f527a0ff2d41aeaac7cab838700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleMenu.png using Guid(11092f527a0ff2d41aeaac7cab838700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '867307b712e7ca1504f18dc52523e7b6') in 0.032904 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCirclePlus.png
+  artifactKey: Guid(84034892e0e24354e94fffa86ec9903c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCirclePlus.png using Guid(84034892e0e24354e94fffa86ec9903c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2f331179e361eecea64b99a08692855') in 0.031312 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleRewind.png
+  artifactKey: Guid(245a5fde3dfa41a48860aea397c99306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleRewind.png using Guid(245a5fde3dfa41a48860aea397c99306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a460ab648e59b0289a610922aa721565') in 0.035102 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleMusic.png
+  artifactKey: Guid(3fee610f58a9de747a80bd96f8db08dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleMusic.png using Guid(3fee610f58a9de747a80bd96f8db08dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5b92056fba1c53fb4e1f223cd08bfab') in 0.031972 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleDoubleArrowTop.png
+  artifactKey: Guid(a75ec2d04c2edbc409e3d838c44a11cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleDoubleArrowTop.png using Guid(a75ec2d04c2edbc409e3d838c44a11cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b90eb14d12b446e74c36cf6a828c45ff') in 0.035569 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleDownloadRight.png
+  artifactKey: Guid(01d0992e6f1af294097a22bfcdf20318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleDownloadRight.png using Guid(01d0992e6f1af294097a22bfcdf20318) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a80d314729d64190007faad71efbcaa') in 0.029384 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleHome.png
+  artifactKey: Guid(a256f450df9c3bd439145ccaf5edc3ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleHome.png using Guid(a256f450df9c3bd439145ccaf5edc3ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a63a75fd9b930d04035addb95f961369') in 0.030946 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleStars.png
+  artifactKey: Guid(9d7c2e4c5fdb6b449ab4dc298e54e4b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleStars.png using Guid(9d7c2e4c5fdb6b449ab4dc298e54e4b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '472c9a5faf40ea3c9a99aa63047ebf07') in 0.028658 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleShop.png
+  artifactKey: Guid(922d4d3b726962347aadf3c244729a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/JellyIcons/512x512/Icons/BlueCircles/BlueCircleShop.png using Guid(922d4d3b726962347aadf3c244729a27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c047ee51f4615b7c273da87e6ab9aae2') in 0.030971 seconds 
+Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

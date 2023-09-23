@@ -24,6 +24,7 @@ public class UIGame : MonoBehaviour
     public GameObject skillsMenu;
     public GameObject closeSkillMenu;
     public GameObject settingsMenu;
+    public GameObject settingsImage;
     public GameObject pauseText;
 
 
@@ -53,6 +54,7 @@ public class UIGame : MonoBehaviour
         money.AddMoneyFromWave();
         money.SaveMoney();
         settingsMenu.SetActive(false);
+        settingsImage.SetActive(false);
         waveFinishedMenu.SetActive(true);
         Time.timeScale = 0.0f;
         moneyGeneratedThisRoundText.text = PlayerUpgrades.MoneyGeneratedThisRound.ToString();

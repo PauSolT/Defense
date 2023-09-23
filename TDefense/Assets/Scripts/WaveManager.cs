@@ -24,6 +24,8 @@ public class WaveManager : MonoBehaviour
 
     int beforeSpawner;
 
+    float cooldownToSpawnEnemy;
+
 
 
     // Start is called before the first frame update
@@ -39,6 +41,13 @@ public class WaveManager : MonoBehaviour
             Wave = PlayerPrefs.GetInt("wave", 1);
             uiGame.waveText.text = "WAVE " + Wave;
         }
+
+        cooldownToSpawnEnemy = 1f / wave;
+        if (cooldownToSpawnEnemy < 0.1f)
+        {
+            cooldownToSpawnEnemy = 0.1f;
+        }
+        
     }
 
 
@@ -76,7 +85,7 @@ public class WaveManager : MonoBehaviour
             enemy.GetComponent<Enemy>().waveManager = this;
             enemiesWave.RemoveAt(0);
             beforeSpawner = randomSpawner;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(cooldownToSpawnEnemy);
         }
         yield return null;
     }

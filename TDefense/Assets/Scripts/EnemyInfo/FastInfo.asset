@@ -16,5 +16,5 @@ MonoBehaviour:
   healthGrow: 1
   waveGrow: 1
   wavesToGrow: 2
-  waveRequirement: 25
+  waveRequirement: 10
   money: 2
