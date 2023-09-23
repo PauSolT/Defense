@@ -22,10 +22,14 @@ public class WaveManager : MonoBehaviour
     [SerializeField]
     int enemiesRemaining;
 
+    int beforeSpawner;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
+        beforeSpawner = -1;
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Gameplay"))
         {
             SetUpEnemyInfo();
@@ -60,9 +64,18 @@ public class WaveManager : MonoBehaviour
         while (enemiesWave.Count > 0)
         {
             int randomSpawner = Random.Range(0, spawners.Count);
+            if (randomSpawner == beforeSpawner)
+            {
+                randomSpawner += 1;
+                if (randomSpawner >= spawners.Count)
+                {
+                    randomSpawner = 0;
+                }
+            }
             GameObject enemy = Instantiate(enemiesWave[0], spawners[randomSpawner].position, enemiesWave[0].transform.rotation);
             enemy.GetComponent<Enemy>().waveManager = this;
             enemiesWave.RemoveAt(0);
+            beforeSpawner = randomSpawner;
             yield return new WaitForSeconds(1f);
         }
         yield return null;
