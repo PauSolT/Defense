@@ -248,6 +248,7 @@ public class PlayerUpgrades : MonoBehaviour
         adButton.SetActive(false);
         adText.SetActive(false);
         adResultText.SetActive(true);
+        adResultText.GetComponent<TMPro.TextMeshProUGUI>().text = "MONEY EARNED: " + MoneyGeneratedThisRound;
     }
 
 }
