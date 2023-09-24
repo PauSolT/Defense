@@ -47,6 +47,7 @@ public class PlayerUpgrades : MonoBehaviour
     {
         adWatched = false;
         LoadUpgrades();
+        upgradedCritRate = 200;
         moneyGeneratedThisRound = 0;
         ApplyUpgrades();
         CalculateAllCosts();

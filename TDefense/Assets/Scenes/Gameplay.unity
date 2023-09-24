@@ -1777,6 +1777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiGame: {fileID: 1485256532}
+  playerHealth: {fileID: 0}
 --- !u!114 &1084178415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1825,6 +1826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiGame: {fileID: 1485256532}
+  player: {fileID: 1084178414}
   tutorial: {fileID: 664862552}
   spawners:
   - {fileID: 1163356474}

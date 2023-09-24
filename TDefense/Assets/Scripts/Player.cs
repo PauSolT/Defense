@@ -5,14 +5,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public UIGame uiGame;
-    HealthComponent playerHealth;
-
-    static bool playerIsAlive = true;
-    public static bool PlayerIsAlive { get => playerIsAlive; }
+    public HealthComponent playerHealth;
 
     public void InitPlayer()
     {
-        playerIsAlive = true;
         playerHealth = GetComponent<HealthComponent>();
         playerHealth.InitHealthComponent();
         uiGame.RefreshLivesText(playerHealth.CurrentHealthPoints);
@@ -34,17 +30,10 @@ public class Player : MonoBehaviour
             enemy.TryGetComponent(out DamageComponent damageComponent);
             enemy.GetComponent<Enemy>().PlayerDamaged();
             playerHealth.TakeDamage(damageComponent.DamagePoints);
-            CheckIfDead();
 
             uiGame.RefreshLivesText(playerHealth.CurrentHealthPoints);
         }
     }
 
-    void CheckIfDead()
-    {
-        if (playerHealth.CurrentHealthPoints -1 <= 0)
-        {
-            playerIsAlive = false;
-        }
-    }
+  
 }

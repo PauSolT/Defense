@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class WaveManager : MonoBehaviour
 {
     public UIGame uiGame;
+    public Player player;
 
     public GameObject tutorial;
 
@@ -26,6 +27,8 @@ public class WaveManager : MonoBehaviour
 
     float cooldownToSpawnEnemy;
 
+    bool lastEnemyKilled;
+
 
 
     // Start is called before the first frame update
@@ -36,18 +39,18 @@ public class WaveManager : MonoBehaviour
         {
             SetUpEnemyInfo();
             StartWave();
+            cooldownToSpawnEnemy = 1f - (wave*0.01f);
+            if (cooldownToSpawnEnemy < 0.1f)
+            {
+                cooldownToSpawnEnemy = 0.1f;
+            }
+        
         } else
         {
             Wave = PlayerPrefs.GetInt("wave", 1);
             uiGame.waveText.text = "WAVE " + Wave;
         }
 
-        cooldownToSpawnEnemy = 1f - (wave*0.01f);
-        if (cooldownToSpawnEnemy < 0.1f)
-        {
-            cooldownToSpawnEnemy = 0.1f;
-        }
-        
     }
 
 
@@ -93,16 +96,21 @@ public class WaveManager : MonoBehaviour
     public void DecreaseEnemiesRemaining()
     {
         enemiesRemaining--;
-        CheckIfPlayerIsDead();
+        if(enemiesRemaining != 0)
+        {
+            CheckIfPlayerIsDead();
+        }
+
         if (enemiesRemaining == 0)
         {
+            print(lastEnemyKilled);
             CheckIfWaveEnded();
         }
     }
 
     void CheckIfWaveEnded()
     {
-        if (!Player.PlayerIsAlive)
+        if (player.playerHealth.CurrentHealthPoints - 1<= 0 && !lastEnemyKilled)
         {
             uiGame.WaveLost();
            
@@ -114,10 +122,16 @@ public class WaveManager : MonoBehaviour
 
     public void CheckIfPlayerIsDead()
     {
-        if (!Player.PlayerIsAlive)
+
+        if (player.playerHealth.CurrentHealthPoints -1<= 0)
         {
             uiGame.WaveLost();
         }
+    }
+
+    public void LastEnemyIsKilled(bool isKilled)
+    {
+        lastEnemyKilled = isKilled;
     }
 
     public void EndWave()

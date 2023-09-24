@@ -11,6 +11,9 @@ public class Enemy : MonoBehaviour
     public EnemyInfo EnemyInfo { get => info; }
     FireBullets fireBullets;
 
+    public GameObject floatingPoints;
+    public GameObject floatingCrit;
+
     public void InitEnemy()
     {
         enemyHealth = GetComponent<HealthComponent>();
@@ -36,6 +39,7 @@ public class Enemy : MonoBehaviour
             if (isCrit < fireBullets.CritRate)
             {
                 bulletDamage = Mathf.RoundToInt(bulletDamage * (1 + fireBullets.CritDamage / 100));
+                Instantiate(floatingCrit, transform.position, Quaternion.identity);
             }
 
             if (enemyHealth.TakeDamage(bulletDamage))
@@ -49,13 +53,18 @@ public class Enemy : MonoBehaviour
     {
         PlayerUpgrades.MoneyGeneratedThisRound += info.money;
         waveManager = FindObjectOfType<WaveManager>();
+        waveManager.LastEnemyIsKilled(true);
         waveManager.DecreaseEnemiesRemaining();
+        GameObject points = Instantiate(floatingPoints, transform.position, Quaternion.identity);
+        points.transform.GetChild(0).GetComponent<TMPro.TextMeshPro>().text = waveManager.Wave.ToString() + "$";
+
         Destroy(gameObject);
     }
 
     public void PlayerDamaged()
     {
         waveManager = FindObjectOfType<WaveManager>();
+        waveManager.LastEnemyIsKilled(false);
         waveManager.DecreaseEnemiesRemaining();
         Destroy(gameObject);
     }

@@ -87,6 +87,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveManager: {fileID: 0}
   info: {fileID: 11400000, guid: 7c10d4a4dd3101745ab8f1ada3ae5256, type: 2}
+  floatingPoints: {fileID: 941544527540890, guid: 91e04d2a4536586499676ef0f7a4fc2f, type: 3}
+  floatingCrit: {fileID: 941544527540890, guid: c310810a149efaa47a8043331841997d, type: 3}
 --- !u!114 &1082768398811879356
 MonoBehaviour:
   m_ObjectHideFlags: 0
