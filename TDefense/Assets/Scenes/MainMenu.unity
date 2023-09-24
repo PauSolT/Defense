@@ -10438,7 +10438,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4797671847866345614}
         m_TargetAssemblyTypeName: UIGame, Assembly-CSharp
-        m_MethodName: RestartScene
+        m_MethodName: GoToGameplay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

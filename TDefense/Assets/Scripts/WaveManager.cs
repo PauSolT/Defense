@@ -42,7 +42,7 @@ public class WaveManager : MonoBehaviour
             uiGame.waveText.text = "WAVE " + Wave;
         }
 
-        cooldownToSpawnEnemy = 1f / wave;
+        cooldownToSpawnEnemy = 1f - (wave*0.01f);
         if (cooldownToSpawnEnemy < 0.1f)
         {
             cooldownToSpawnEnemy = 0.1f;

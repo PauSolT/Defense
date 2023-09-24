@@ -32,6 +32,7 @@ public class UIGame : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("MainMenu");
+        BgMusic.instance.GetComponent<AudioSource>().Stop();
     }
 
     public void RestartScene()
@@ -39,6 +40,14 @@ public class UIGame : MonoBehaviour
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("Gameplay");
     }
+
+    public void GoToGameplay()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("Gameplay");
+        BgMusic.instance.GetComponent<AudioSource>().Play();
+    }
+
 
     public void RefreshLivesText(int lives)
     {

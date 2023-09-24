@@ -249,7 +249,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 418540007}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7913738
 GameObject:
@@ -377,7 +377,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 418540007}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &39711633
 GameObject:
@@ -1084,7 +1084,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1390366006}
   - {fileID: 7913740}
   - {fileID: 6933376}
   - {fileID: 1959228776}
@@ -2050,6 +2049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1390366006}
   - component: {fileID: 1390366005}
+  - component: {fileID: 1390366007}
   m_Layer: 0
   m_Name: BgMusic
   m_TagString: Untagged
@@ -2161,13 +2161,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390366004}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.11178593, y: 3.0207539, z: 2.051355}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 418540007}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1390366007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390366004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 293e67c45f2b0c4499e2dfc1f0ea4a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1398352998
 GameObject:
   m_ObjectHideFlags: 0
@@ -3252,7 +3264,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 418540007}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2039194304
 GameObject:
@@ -4043,6 +4055,14 @@ PrefabInstance:
       propertyPath: settingsImage
       value: 
       objectReference: {fileID: 1543701248}
+    - target: {fileID: 7531427625866459738, guid: 235c54fdf5e900b4a91ece8b84b23550, type: 3}
+      propertyPath: waveWonSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 870f83379d6c75d4ea19c56626ef8a74, type: 3}
+    - target: {fileID: 7531427625866459738, guid: 235c54fdf5e900b4a91ece8b84b23550, type: 3}
+      propertyPath: waveLostSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4444ee0ab3af52d4387966c896fbf7e9, type: 3}
     - target: {fileID: 7531427625866459741, guid: 235c54fdf5e900b4a91ece8b84b23550, type: 3}
       propertyPath: m_Pivot.x
       value: 0
