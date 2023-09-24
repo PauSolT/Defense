@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1199c8988fb9be49a22f423bfbc263b, type: 3}
   m_Name: BossInfo
   m_EditorClassIdentifier: 
-  healthBase: 100
-  healthGrow: 10
+  healthBase: 1000
+  healthGrow: 50
   waveGrow: 0
   wavesToGrow: 20
   waveRequirement: 20
