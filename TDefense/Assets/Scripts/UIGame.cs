@@ -27,6 +27,10 @@ public class UIGame : MonoBehaviour
     public GameObject settingsImage;
     public GameObject pauseText;
 
+    public GameObject mainMenu;
+    public GameObject resetMenu;
+    public GameObject resetButton;
+
 
     public void GoToMainMenu()
     {
@@ -45,7 +49,10 @@ public class UIGame : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("Gameplay");
-        BgMusic.instance.GetComponent<AudioSource>().Play();
+        if (BgMusic.instance)
+        {
+            BgMusic.instance.GetComponent<AudioSource>().Play();
+        }
     }
 
 
@@ -119,6 +126,24 @@ public class UIGame : MonoBehaviour
         Time.timeScale = 1.0f;
     }
 
+    public void OpenResetProgressMenu()
+    {
+        mainMenu.SetActive(false);
+        resetButton.SetActive(false);
+        resetMenu.SetActive(true);
+    }
+
+    public void CloseResetProgressMenu()
+    {
+        mainMenu.SetActive(true);
+        resetButton.SetActive(true);
+        resetMenu.SetActive(false);
+    }
 
 
+    public void ResetProgress()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("MainMenu");
+    }
 }
