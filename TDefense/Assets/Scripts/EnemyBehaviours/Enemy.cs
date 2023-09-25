@@ -51,7 +51,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        PlayerUpgrades.MoneyGeneratedThisRound += info.money;
+        PlayerUpgrades.MoneyGeneratedThisRound += System.Convert.ToDouble(info.money);
         waveManager = FindObjectOfType<WaveManager>();
         waveManager.LastEnemyIsKilled(true);
         waveManager.DecreaseEnemiesRemaining();

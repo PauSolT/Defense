@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class PlayerUpgrades : MonoBehaviour
 {
@@ -17,10 +18,10 @@ public class PlayerUpgrades : MonoBehaviour
     public GameObject adResultText;
 
     [SerializeField]
-    int money = 0;
-    public int Money { get => money; set => money = value; }
-    static int moneyGeneratedThisRound = 0;
-    public static int MoneyGeneratedThisRound { get => moneyGeneratedThisRound; set => moneyGeneratedThisRound = value; }
+    double money = 0;
+    public double Money { get => money; set => money = value; }
+    static double moneyGeneratedThisRound = 0;
+    public static double MoneyGeneratedThisRound { get => moneyGeneratedThisRound; set => moneyGeneratedThisRound = value; }
 
 
     int upgradedDamage = 0;
@@ -29,11 +30,11 @@ public class PlayerUpgrades : MonoBehaviour
     float upgradedCritRate = 0;
     float upgradedCritDamage = 0;
 
-    int costDamage = 0;
-    int costHealth = 0;
-    int costFireRate = 0;
-    int costCritRate = 0;
-    int costCritDamage = 0;
+    double costDamage = 0;
+    double costHealth = 0;
+    double costFireRate = 0;
+    double costCritRate = 0;
+    double costCritDamage = 0;
 
     readonly int damageMultiplier = 1;
     readonly int healthMultiplier = 1;
@@ -47,7 +48,6 @@ public class PlayerUpgrades : MonoBehaviour
     {
         adWatched = false;
         LoadUpgrades();
-        upgradedCritRate = 200;
         moneyGeneratedThisRound = 0;
         ApplyUpgrades();
         CalculateAllCosts();
@@ -85,6 +85,12 @@ public class PlayerUpgrades : MonoBehaviour
     {
         buttonTexts[3].text = costCritRate.ToString();
         valueTexts[3].text = "CURRENT: " + (playerFire.CritRate).ToString("0.0") + "%";
+
+        if(playerFire.CritRate >= 100)
+        {
+            buttonTexts[3].text = "MAX";
+            buttonTexts[3].transform.parent.GetComponent<UnityEngine.UI.Button>().interactable = false;
+        }
     }
 
     void RefreshCritDamageTexts()
@@ -151,27 +157,27 @@ public class PlayerUpgrades : MonoBehaviour
 
     void CalculateCostDamage()
     {
-        costDamage = Mathf.FloorToInt(10 * Mathf.Pow(1.07f, upgradedDamage) + upgradedDamage);
+        costDamage = Mathf.Round(10 * Mathf.Pow(1.03f, upgradedDamage) + upgradedDamage);
     }
 
     void CalculateCostHealth()
     {
-        costHealth = Mathf.FloorToInt(10 * Mathf.Pow(1.1f, upgradedHealth) + upgradedHealth);
+        costHealth = Mathf.Round(10 * Mathf.Pow(1.05f, upgradedHealth) + upgradedHealth);
     }
 
     void CalculateCostFireRate()
     {
-        costFireRate = Mathf.FloorToInt(10 * Mathf.Pow(1.1f, upgradedFireRate) + upgradedFireRate);
+        costFireRate = Mathf.Round(10 * Mathf.Pow(1.05f, upgradedFireRate) + upgradedFireRate);
     }
 
     void CalculateCostCritRate()
     {
-        costCritRate = Mathf.FloorToInt(15 * Mathf.Pow(1.15f, upgradedCritRate) + upgradedCritRate);
+        costCritRate = Mathf.Round(15 * Mathf.Pow(1.07f, upgradedCritRate) + upgradedCritRate);
     }
 
     void CalculateCostCritDamage()
     {
-        costCritDamage = Mathf.FloorToInt(20 * Mathf.Pow(1.15f, upgradedCritDamage) + upgradedCritDamage);
+        costCritDamage = Mathf.Round(20 * Mathf.Pow(1.1f, upgradedCritDamage) + upgradedCritDamage);
     }
 
     void CalculateAllCosts()
@@ -190,7 +196,7 @@ public class PlayerUpgrades : MonoBehaviour
 
     void LoadUpgrades()
     {
-        money = PlayerPrefs.GetInt("money", 0);
+        money = Convert.ToDouble(PlayerPrefs.GetString("money", "0"));
         upgradedDamage = PlayerPrefs.GetInt("upgradedDamage", 0);
         upgradedHealth = PlayerPrefs.GetInt("upgradedHealth", 0);
         upgradedFireRate = PlayerPrefs.GetFloat("upgradedFireRate", 0);
@@ -200,12 +206,12 @@ public class PlayerUpgrades : MonoBehaviour
 
     public void SaveMoney()
     {
-        PlayerPrefs.SetInt("money", money);
+        PlayerPrefs.SetString("money", money.ToString());
     }
 
     void SaveUpgrades()
     {
-        PlayerPrefs.SetInt("money", money);
+        PlayerPrefs.SetString("money", money.ToString()); ;
         PlayerPrefs.SetInt("upgradedDamage", upgradedDamage);
         PlayerPrefs.SetInt("upgradedHealth", upgradedHealth);
         PlayerPrefs.SetFloat("upgradedFireRate", upgradedFireRate);
